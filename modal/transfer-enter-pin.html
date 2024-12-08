@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Transfer - Enter Pin</title>
+        <style>
+            .pin-container {
+                text-align: center;
+                height: 150px;
+            }
+            .pin-input-container {
+                padding-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            .pin-input {
+                width: 50px;
+                height: 60px;
+                text-align: center;
+                font-size: 30px;
+                border: none;
+                border-bottom: 1px solid #2948ff;
+                background-color: transparent;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            .pin-input:focus {
+                border-color: #0056b3;
+            }
+            .form-button {
+                background-color: #2948ff;
+                color: #ffffff;
+                height: 50px;
+                width: 100%;
+                margin-top: 13px;
+                border-radius: 6px;
+                border-style: none;
+                padding: 10px;
+                font-weight: 500;
+            }
+            .form-button:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+            .form-reset-button {
+                text-align: center;
+                margin-top: 13px;
+            }
+            .form-reset-button > a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="form-login">
+            <p>transfer to ghaluh 1</p>
+            <form action="">
+                <h1>Enter Your Pin 👋</h1>
+                <p>enter your pin for transaction</p>
+                <div class="pin-container">
+                    <div class="pin-input-container">
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                        <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                    </div>
+                </div>
+                <button type="submit" class="form-button">Login</button>
+                <p class="form-reset-button">Forget Your Pin? <a href="./register.html">Reset</a></p>
+            </form>
+        </section>
+    </body>
+</html>

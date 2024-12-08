@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+        <link rel="stylesheet" href="../styles/dashboard.css" />
+        <title>Dashboard V1</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="z-wallet-logo">
+                        <a href="#"><img src="../assets/dashboard/e-wallet-dashboard.png" alt="" /></a>
+                    </li>
+                    <li class="hamburger-menu" hidden>
+                        <span class="material-symbols-outlined"> menu </span>
+                        <!-- <select name="nav-menu" id="nav-menu"></select> -->
+                    </li>
+
+                    <li class="nav-left">
+                        <p class="dashboard-name">Ghaluh Wizard</p>
+                        <img class="dashboard" src="../assets/dashboard/avatar-dashboard.png" alt="" />
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2948FF"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" /></svg>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+                                    Profile</a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
+                                    Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <aside class="menu">
+                <a href="#">
+                    <img src="../assets/dashboard/dashboard.png" alt="dashboard-button" />
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/transfer.png" alt="transfer-button" />
+                    Transfer
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/history.png" alt="history-button" />
+                    History
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/topup.png" alt="top-up-button" />
+                    Top Up
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/keluar.png" alt="logout-button" />
+                    Logout
+                </a>
+            </aside>
+            <article class="chart">
+                <div class="cash-flow">
+                    <div class="card-cash-flow">
+                        <div class="card-title-cash-flow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
+                                <path
+                                    d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"
+                                />
+                            </svg>
+                            <h3>Balance</h3>
+                        </div>
+                        <p class="card-amount-cash-flow">Rp.120.000</p>
+                        <div class="card-trend-cash-flow">
+                            <p>2%</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00A700">
+                                <path d="M127.33-240 80-287.33l293.33-293.34L538-416l230-229.33H648.67V-712H880v231.33h-66v-116.66L537.33-320.67 372.67-485.33 127.33-240Z" />
+                            </svg>
+                            <p>3 Days Ago</p>
+                        </div>
+                    </div>
+                    <div class="card-cash-flow">
+                        <div class="card-title-cash-flow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
+                                <path
+                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h200v80H160v480h640v-480H600v-80h200q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-184L280-544l56-56 104 104v-304h80v304l104-104 56 56-200 200Z"
+                                />
+                            </svg>
+                            <h3>Income</h3>
+                        </div>
+                        <p class="card-amount-cash-flow">Rp.2.120.000</p>
+                        <div class="card-trend-cash-flow">
+                            <p>11.01%%</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00A700">
+                                <path d="M127.33-240 80-287.33l293.33-293.34L538-416l230-229.33H648.67V-712H880v231.33h-66v-116.66L537.33-320.67 372.67-485.33 127.33-240Z" />
+                            </svg>
+                            <p>3 Days Ago</p>
+                        </div>
+                    </div>
+                    <div class="card-cash-flow">
+                        <div class="card-title-cash-flow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
+                                <path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                            <h3>Expense</h3>
+                        </div>
+                        <p class="card-amount-cash-flow">Rp.120.000</p>
+                        <div class="card-trend-cash-flow">
+                            <p style="color: #d00000">5.06%</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000">
+                                <path d="M640-240v-80h104L536-526 376-366 80-664l56-56 240 240 160-160 264 264v-104h80v240H640Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="fast-service">
+                    <h3>Fast Service</h3>
+                    <div class="button-fast-service">
+                        <button type="button">
+                            <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
+                            Top Up
+                        </button>
+                        <button type="button">
+                            <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
+                            Transfer
+                        </button>
+                    </div>
+                </div>
+                <div class="income-chart">
+                    <div class="income-chart-menu">
+                        <h3>Income Chart</h3>
+                        <div class="selection">
+                            <select name="days-income-chart" id="days-income-chart">
+                                <option value="default" hidden>Choice Days</option>
+                                <option value="1">1 Days</option>
+                                <option value="2">2 Days</option>
+                                <option value="3">3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5 Days</option>
+                                <option value="6">6 Days</option>
+                                <option value="7" selected>7 Days</option>
+                            </select>
+                            <select name="category" id="category">
+                                <option value="default" hidden>Category</option>
+                                <option value="balance">Balance</option>
+                                <option value="income" selected>Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-picture">
+                        <img src="../assets/dashboard/Chart.png" width="472" alt="chart" />
+                    </div>
+                </div>
+            </article>
+            <aside class="transaction-history">
+                <section class="transaction-history-title">
+                    <h2>Transaction History</h2>
+                    <a href="#">See All</a>
+                </section>
+                <ul>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                    <li class="card-transaction-history">
+                        <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                        <div class="card-info-transaction-history">
+                            <p>Yanti</p>
+                            <p>Transfer</p>
+                        </div>
+                        <p>+Rp50.000</p>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </body>
+</html>
