@@ -7,8 +7,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
-        <link rel="stylesheet" href="../styles/transfer-set-nominal.css" />
-        <title>Transfer - Set Nominal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="../styles/top-up.css" />
+        <title>...</title>
     </head>
     <body>
         <header>
@@ -48,8 +51,8 @@
                 </ul>
             </nav>
         </header>
-        <section class="container">
-            <aside class="menu" >
+        <main class="container">
+            <aside class="menu">
                 <a href="#">
                     <img src="../assets/dashboard/dashboard.png" alt="dashboard-button" />
                     Dashboard
@@ -74,44 +77,81 @@
                     Logout
                 </a>
             </aside>
-            <article class="people-information" >
-                <section class="head">
+            <article class="container-top-up people-information">
+                <section class="top-up-title head">
                     <img src="../assets/transfer/transfer-blue.png" alt="logo-transfer" />
-                    <h2>Transfer Money</h2>
+                    <h3>Top Up Account</h3>
                 </section>
-                <section class="transfer-process">
-                    <p><span>1</span>Find People</p>
-                    <p><span>2</span>Set Nominal</p>
-                    <p><span>3</span>Finish</p>
-                </section>
-                <!-- Template End -->
-                <h3>People Information</h3>
-                <div class="person-info" >
-                    <img class="person-avatar" src="../assets/transfer/person-find.png" alt="people-information" />
+                <h3 class="account-information">Account Information</h3>
+                <section class="account-information person-info">
+                    <img src="../assets/transfer/person-find.png" class="person-avatar" alt="people-information" />
                     <div class="person-detail">
                         <p>Ghaluh</p>
                         <p>(1234)567-8900</p>
-                        <p><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="m429-336 238-237-51-51-187 186-85-84-51 51 136 135Zm51 240q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>Verified</p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+                                <path
+                                    d="m429-336 238-237-51-51-187 186-85-84-51 51 136 135Zm51 240q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"
+                                /></svg
+                            >Verified
+                        </p>
                     </div>
-                    <div class="person-favorite">
-                        <label for="" hidden></label>
-                        <input type="checkbox" />
-                    </div>
-                </div>
-                <form action="" >
-                    <div class="amount-transfer">
+                </section>
+                <form action="">
+                    <section class="amount-transfer">
                         <label for="nominal">Amount</label>
                         <p>Type the amount you want to transfer and then press continue to the next steps.</p>
                         <input type="nominal" id="nominal" name="nominal" placeholder="Enter Your Nominal" class="img-inside" style="background-image: url('../assets/')" />
-                    </div>
-                    <div class="notes-transfer">
-                        <label for="notes">Notes</label>
-                        <p>You can add some notes for this transfer such as payment coffee or something</p>
-                        <textarea name="notes" id="notes" ></textarea>
-                    </div>
-                    <button class="button-submit-transfer" type="submit">Submit & Transfer</button>
+                    </section>
+                    <section class="payment-method amount-transfer">
+                        <h3 class="payment-method-title">Payment</h3>
+                        <p>Choose your payment method for top up account</p>
+                        <div class="payment-method-list">
+                            <label for="payment-method">Bank Rakyat Indonesia</label>
+                            <span><img src="../assets/top-up/bri.png" alt="bri" /></span>
+                            <input type="radio" name="payment-method" id="" />
+                        </div>
+                        <div class="payment-method-list">
+                            <label for="payment-method">Bank Central Asia</label>
+                            <span><img src="../assets/top-up/bca.png" alt="bca" /></span>
+                            <input type="radio" name="payment-method" id="" />
+                        </div>
+                        <div class="payment-method-list">
+                            <label for="payment-method">Gopay</label>
+                            <span><img src="../assets/top-up/gopay.png" alt="gopay" /></span>
+                            <input type="radio" name="payment-method" id="" />
+                        </div>
+                        <div class="payment-method-list">
+                            <label for="payment-method">Dana</label>
+                            <span><img src="../assets/top-up/dana.png" alt="dana" /></span>
+                            <input type="radio" name="payment-method" id="" />
+                        </div>
+                        <div class="payment-method-list">
+                            <label for="payment-method">OVO</label>
+                            <span><img src="../assets/top-up/ovo.png" alt="ovo" /></span>
+                            <input type="radio" name="payment-method" id="" />
+                        </div>
+                    </section>
                 </form>
             </article>
-        </section>
+            <aside class="payment-method-container">
+                <h3 class="payment-title">Payment</h3>
+                <div class="list-payment">
+                    <p>Order</p>
+                    <p>Rp. 40.000</p>
+                </div>
+                <div class="list-payment">
+                    <p>Tax</p>
+                    <p>Rp. 4000</p>
+                </div>
+                <div class="list-payment">
+                    <p>Sub Total</p>
+                    <p>Rp. 44.000</p>
+                </div>
+                <!-- <button type="button">Submit</button> -->
+                <button class="button-submit-transfer" type="submit">Submit & Transfer</button>
+                <p>*Get Discount if you pay with Bank Central Asia</p>
+            </aside>
+        </main>
     </body>
 </html>
