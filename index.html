@@ -11,26 +11,39 @@
             * {
                 font-family: "Montserrat", sans-serif;
                 text-decoration: none;
-                color: #2948FF;
+                color: #2948ff;
             }
             h1 {
                 color: black;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                text-transform: capitalize;
+            }
+            .modal {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-left: 15px;
+                margin-top: 15px;
             }
         </style>
     </head>
     <body>
         <h1>Weekly Task - Month 1 - Week 3</h1>
-        <div style="display: flex; flex-direction: column; gap: 10px">
-            <a href="./pages/login.html">LOGIN</a>
-            <a href="./pages/forget-password.html">forget-password</a>
+        <div class="container">
+            <a href="./pages/login.html">login</a>
             <a href="./pages/register.html">register</a>
-            <a href="./pages/forget-password.html">forget-password.html</a>
+            <a href="./pages/forget-password.html">forget-password</a>
             <a href="./pages/enter-pin.html">enter-pin</a>
             <a href="./pages/landing-page.html">landing-page</a>
             <a href="./pages/dashboard.html">dashboard</a>
+            <a href="./pages/history.html">history</a>
             <details>
                 <summary>Transfer</summary>
-                <div class="modal" style="display: flex; flex-direction: column; gap: 10px; margin-left: 15px; margin-top: 15px">
+                <div class="modal" class="modal">
                     <a href="./pages/transfer-find-people.html">transfer-find-people</a>
                     <a href="./pages/transfer-set-nominal.html">transfer-set-nominal</a>
                     <a href="./modal/transfer-enter-pin.html">transfer-enter-pin</a>

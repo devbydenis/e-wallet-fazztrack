@@ -1,0 +1,503 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+a,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border: 1px solid #e8e8e8;
+    padding: 14px 79px 14px 44px;
+}
+header nav ul .z-wallet-logo img {
+    width: 150px;
+    padding: 10px;
+}
+header nav ul li:nth-child(1) {
+    align-content: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 248px;
+    z-index: 1;
+    top: 45px;
+    right: 10px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2948ff;
+    background-color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.dropdown-content a:first-child:hover {
+    background-color: #2948ff;
+    color: #ffffff;
+    border-radius: 8px;
+}
+.dropdown-content a:nth-child(2) {
+    color: #d00000;
+}
+.dropdown-content a:nth-child(2):hover {
+    background-color: #d00000;
+    color: #ffffff;
+    border-radius: 8px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dashboard-name {
+    color: #4f5665;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0, 6%;
+}
+.dashboard-avatar {
+    width: 48px;
+    height: 48px;
+}
+.hamburger-menu {
+    text-align: center;
+    align-content: center;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* height: 100vh; */
+}
+
+.menu {
+    border-right: 1px solid #e8e8e8;
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 24px;
+}
+.menu a {
+    text-decoration: none;
+    color: #4f5665;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.menu a:last-child {
+    color: #d00000;
+}
+.menu a:hover {
+    background-color: #2948ff;
+    color: #ffffff;
+    border-radius: 8px;
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 39px;
+    margin-top: 26px;
+}
+.head h2 {
+    color: #0b132a;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0, 6%;
+}
+.transfer-process {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    padding: 44px 30px;
+    gap: 10px;
+}
+.transfer-process p {
+    color: #4f5665;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+}
+.transfer-process p:first-child:after,
+.transfer-process p:nth-child(2):after {
+    content: " ---------";
+}
+.transfer-process p span {
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 10px;
+    background-color: #4f5665;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+}
+.transfer-process p:nth-child(2) {
+    color: #2948ff;
+}
+.transfer-process p:nth-child(2) span:first-child {
+    background-color: #2948ff;
+}
+
+/* TEMPLATE END*/
+.people-information {
+    flex: 80%;
+    padding: 30px 30px;
+    margin-bottom: 50px;
+}
+.people-information h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #0b132a;
+}
+.person-info {
+    padding: 18px 30px;
+    background-color: #e8e8e84d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.person-avatar {
+    width: 80px;
+    height: 80px;
+}
+.person-detail {
+    flex: 70%;
+    padding: 0px 20px;
+    line-height: 25px;
+}
+.person-detail svg {
+    margin-right: 5px;
+}
+.person-detail p:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+}
+.person-detail p:nth-child(2) {
+    font-weight: 400;
+    font-size: 14px;
+}
+.person-detail p:nth-child(3) {
+    /* padding: 4px 8px; */
+    background-color: #2948ff;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 92px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    padding: 0px 5px;
+    align-items: center;
+}
+.person-favorite {
+    flex: 1%;
+    text-align: end;
+}
+form {
+    padding: 0px 30px;
+}
+
+.amount-transfer {
+    margin-top: 16px;
+}
+.amount-transfer label,
+.notes-transfer label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    color: #0b132a;
+}
+.amount-transfer p,
+.notes-transfer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.07px;
+    color: #4f5665;
+}
+.amount-transfer input[name="nominal"] {
+    height: 38px;
+}
+.amount-transfer input,
+.notes-transfer textarea {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding-left: 10px;
+    outline-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.notes-transfer textarea[name="notes"] {
+    height: 223px;
+}
+.button-submit-transfer {
+    width: 100%;
+    height: 50px;
+    background-color: #2948ff;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    cursor: pointer;
+}
+.button-submit-transfer:hover {
+    opacity: 0.9;
+}
+
+.transaction-history {
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    margin-top: 44px;
+    padding: 0 39px;
+}
+.transaction-history-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 21px;
+}
+.transaction-history-title h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0, 6%;
+    color: #0b132a;
+}
+.transaction-history-title a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0, 6%;
+    color: #2948ff;
+}
+.card-transaction-history {
+    /* border: 1px solid #E8E8E8; */
+    padding: 3px 16px;
+    margin-bottom: 28px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.card-transaction-history img {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+}
+.card-transaction-history p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #1ec15f;
+}
+.card-transaction-history p::nth-child(even) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #d00000;
+}
+.card-info-transaction-history {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card-info-transaction-history p:first-child {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #0b132a;
+}
+.card-info-transaction-history p:nth-child(2) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #4f5665;
+}
+.card-phone-number-transaction-history p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #4f5665;
+}
+
+

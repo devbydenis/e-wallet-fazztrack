@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="../styles/history.css" />
-        <title>History Transsaction</title>
+        <link rel="stylesheet" href="../styles/change-pin.css" />
+        <title>Change Pin</title>
     </head>
     <body>
         <header>
@@ -82,54 +82,23 @@
                     <img src="../assets/transfer/transfer-blue.png" alt="logo-transfer" />
                     <h3>History Transaction</h3>
                 </section>
-                <!-- <h3 class="account-information">Find Transaction</h3> -->
-                <section class="transaction-history">
-                    <section class="transaction-history-title">
-                        <h2>Find Transaction</h2>
-                        <a href="#">See All</a>
-                    </section>
-                    <ul>
-                        <li class="card-transaction-history">
-                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
-                            <div class="card-info-transaction-history">
-                                <p>Yanti</p>
-                                <p>Transfer</p>
+                <section class="form-login">
+                    <form action="">
+                        <div class="pin-container">
+                            <h1 class="change-pin-title">Change Pin 👋</h1>
+                            <p class="form-reset-button">Forget Your Pin? <a href="./register.html">Reset</a></p>
+                            <div class="pin-input-container">
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="1" />
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="2" />
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="3" />
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="4" />
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="5" />
+                                <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" value="6" />
                             </div>
-                            <div class="card-phone-number-transaction-history">
-                                <p>08221234567</p>
-                            </div>
-                            <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
-                            </div>
-                        </li>
-                        <li class="card-transaction-history">
-                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
-                            <div class="card-info-transaction-history">
-                                <p>Yanti</p>
-                                <p>Transfer</p>
-                            </div>
-                            <div class="card-phone-number-transaction-history">
-                                <p>08221234567</p>
-                            </div>
-                            <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
-                            </div>
-                        </li>
-                        <li class="card-transaction-history">
-                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
-                            <div class="card-info-transaction-history">
-                                <p>Yanti</p>
-                                <p>Transfer</p>
-                            </div>
-                            <div class="card-phone-number-transaction-history">
-                                <p>08221234567</p>
-                            </div>
-                            <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
-                            </div>
-                        </li>
-
-                    </ul>
+                            <button type="submit" class="form-button">Submit</button>
+                        </div>
+                        <!-- <p class="form-reset-button">Forget Your Pin? <a href="./register.html">Reset</a></p> -->
+                    </form>
                 </section>
             </article>
         </main>
