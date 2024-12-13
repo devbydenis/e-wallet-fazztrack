@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Setelah Login</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                background-color: #ffffff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .zwallet-username {
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.006em;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                color: #4F5665;
+            }
+
+            .nav-left {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .nav-left:hover {
+                cursor: pointer;
+            }
+
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .user-profile {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .user-profile img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-toggle {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                min-width: 200px;
+                z-index: 1000;
+                padding: 10px 0;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 15px;
+                color: #2948ff;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #f1f3ff;
+            }
+
+            .dropdown-menu a:last-child {
+                color: #d00000;
+            }
+
+            .hamburger-menu {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            .hamburger-line {
+                width: 25px;
+                height: 3px;
+                background-color: #2948ff;
+                margin: 3px 0;
+            }
+
+            @media screen and (max-width: 768px) {
+                .navbar {
+                    padding: 10px;
+                }
+
+                .zwallet-username {
+                    display: none;
+                }
+
+                .hamburger-menu {
+                    display: flex;
+                }
+
+                .user-profile img {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .nav-left {
+                    gap: 10px;
+                }
+                
+                .zwallet-logo-medium {
+                    display: none;
+                }
+                
+                .dropdown-menu {
+                    min-width: 180px;
+                }
+            }
+            @media screen and (min-width: 480px) {
+                .zwallet-logo-small {
+                    display: none;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="./pages/landing-page.html">
+                    <img class="zwallet-logo-medium" src="../assets/transfer/e-wallet-nav-left.png" alt="Navigation" />
+                    <img class="zwallet-logo-small" src="../assets/zwallet-logo.svg" alt="" />
+                </a>
+                <!-- <div class="hamburger-menu">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div> -->
+            </div>
+
+            <div class="nav-right">
+                <div class="user-profile">
+                    <span class="zwallet-username">Ghaluh Wizard</span>
+                    <img src="../assets/dashboard/avatar-dashboard.png" alt="Avatar" />
+
+                    <div class="dropdown">
+                        <div class="dropdown-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
+                                <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
+                            </svg>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
+                                    <path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z" />
+                                </svg>
+                                Profile
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000">
+                                    <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                                </svg>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <title>Button</title>
+        <style>
+            *{
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .submit-btn-transparent {
+                background-color: #ffffff;
+                color: #d00000;
+                border: 1px solid #d00000;
+            }
+
+            .submit-btn {
+                background-color: #2948FF;
+                color: #ffffff;
+                border: none;
+            }
+
+            .submit-btn-transparent,
+            .submit-btn {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .submit-btn-transparent::before {
+                content: url('../assets/delete-logo-red.svg');
+                margin-right: 10px;
+            }
+            
+            .submit-btn::before {
+                content: url('/assets/transfer/transfer-logo-white.svg');
+                margin-right: 10px;
+            }
+
+            .submit-btn:hover {
+                background-color: #2948FF;
+                opacity: 0.9;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="submit" class="submit-btn">Transfer</button>
+        <br>
+        <button type="submit" class="submit-btn-transparent">Delete</button>
+    </body>
+</html>

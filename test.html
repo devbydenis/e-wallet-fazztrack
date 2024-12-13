@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <title>PIN Entry</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+                padding: 2rem;
+                text-align: start;
+            }
+
+            .title-input {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21.94px;
+                color: #0b132a;
+                margin-bottom: 10px;
+            }
+
+            .description-input {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 23.3px;
+                color: #4f5665;
+                margin-bottom: 13px;
+            }
+
+            .pin-input-container {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-bottom: 13px;
+            }
+
+            .pin-input {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                font-size: 1.5rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                outline: none;
+            }
+
+            .pin-input:focus {
+                border-color: #2948ff;
+                box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+            }
+
+            .login-btn {
+                width: 100%;
+                padding: 1rem;
+                background-color: #2948ff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-bottom: 1rem;
+            }
+
+            .login-btn:hover {
+                background-color: #0056b3;
+            }
+
+            .forget-input {
+                text-align: center;
+            }
+
+            .reset-pin {
+                color: #007bff;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+            .reset-pin:hover {
+                text-decoration: underline;
+            }
+
+            /* Responsive Media Queries */
+            @media screen and (max-width: 768px) {
+                .container {
+                    width: 100%;
+                    padding: 1.5rem;
+                }
+
+                .pin-input {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .container {
+                    border-radius: 0;
+                    box-shadow: none;
+                    padding: 1rem;
+                }
+
+                .pin-input {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 1rem;
+                }
+
+                .login-btn {
+                    padding: 0.75rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <h1 class="title-input">Enter Your Pin 👋</h1>
+                <p class="description-input">Please save your pin because this so important.</p>
+                <div class="pin-container">
+                    <div class="pin-input-container">
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                        <input type="password" maxlength="1" class="pin-input" pattern="\d*" inputmode="numeric" required />
+                    </div>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="forget-input">Forget Your Pin? <a href="./register.html" class="reset-pin">Reset</a></p>
+            </form>
+        </div>
+
+        <script>
+            // Automatic focus and tab between PIN inputs
+            const pinInputs = document.querySelectorAll(".pin-input");
+
+            pinInputs.forEach((input, index) => {
+                input.addEventListener("input", () => {
+                    if (input.value.length === 1 && index < pinInputs.length - 1) {
+                        pinInputs[index + 1].focus();
+                    }
+                });
+
+                input.addEventListener("keydown", (e) => {
+                    if (e.key === "Backspace" && input.value.length === 0 && index > 0) {
+                        pinInputs[index - 1].focus();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

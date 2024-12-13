@@ -1,142 +1,14 @@
-/* CSS RESET */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-v2.0 | 20110126
-License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol,
-ul {
-    list-style: none;
-}
-blockquote,
-q {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-* {
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Montserrat", sans-serif;
 }
 
+/* ------------HEADER------------ */
+header {
+    width: 100%;
+}
 header nav ul {
     display: flex;
     justify-content: space-between;
@@ -224,6 +96,7 @@ header nav ul li:nth-child(1) {
     color: #ffffff;
 }
 
+/* ------------MAIN------------ */
 .container {
     display: flex;
     flex-direction: row;
@@ -261,6 +134,8 @@ header nav ul li:nth-child(1) {
     color: #ffffff;
     border-radius: 8px;
 }
+
+/* ------------ARTICLE------------ */
 .head {
     display: flex;
     align-items: center;
@@ -488,4 +363,102 @@ form {
     line-height: 24px;
     letter-spacing: -0.006em;
     text-align: center;
+}
+@media screen and (min-width: 768px) {
+    .title-header {
+        display: none;
+    }
+    .menu-bottom {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu-bottom {
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 476px) {
+    header {
+        width: 100%;
+    }
+    article {
+        width: 100%;
+    }
+    .title-header {
+        display: none;
+    }
+    /* .menu {
+        display: none;
+    } */
+    .head {
+        display: none;
+    }
+    .menu-bottom {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    header > nav {
+        display: none;
+    }
+    .title-header {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        background-color: #2948ff;
+        color: #ffffff;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .head {
+        display: none;
+    }
+    .form-pin {
+        width: 100%;
+    }
+    .pin-input-container {
+        gap: 15px;
+    }
+    .pin-input {
+        font-style: 14px;
+    }
+    .menu-bottom {
+        /* border: 1px solid red; */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12.19px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+        box-shadow: 0px -2px 20px 0px #00000014;
+    }
+    .menu-bottom > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        margin: 16px 0;
+        text-decoration: none;
+        color: #4f5665;
+    }
+    .menu-bottom a > img {
+        width: 24px;
+    }
 }

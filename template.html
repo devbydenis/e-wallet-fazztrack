@@ -12,6 +12,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="../styles/top-up.css" />
         <title>...</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: "Montserrat", sans-serif !important;
+            }
+
+            .menu {
+                border-right: 1px solid #e8e8e8;
+                flex: 20%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 27px;
+                padding-right: 27px;
+                padding-top: 24px;
+            }
+            .menu a {
+                text-decoration: none;
+                color: #4f5665;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: -0.6%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 10px;
+                padding: 10px;
+            }
+            .menu a:last-child {
+                color: #d00000;
+            }
+            .menu a:hover {
+                background-color: #2948ff;
+                color: #ffffff;
+                border-radius: 8px;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -154,4 +191,57 @@
             </aside>
         </main>
     </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tombol Favorite Bintang</title>
+    <style>
+        .favorite-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .favorite-checkbox {
+            display: none;
+        }
+
+        .favorite-label {
+            cursor: pointer;
+            font-size: 50px;
+            transition: transform 0.2s ease;
+        }
+
+        .favorite-label::before {
+            content: '☆';
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .favorite-checkbox:checked + .favorite-label::before {
+            content: '★';
+            color: #FFD700;
+        }
+
+        .favorite-label:hover {
+            transform: scale(1.1);
+        }
+
+        .favorite-checkbox:checked + .favorite-label:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="favorite-container">
+        <input type="checkbox" id="favoriteCheckbox" class="favorite-checkbox">
+        <label for="favoriteCheckbox" class="favorite-label"></label>
+    </div>
+</body>
 </html>

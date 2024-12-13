@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <title>Sidebar</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: "Montserrat", sans-serif !important;
+            }
+
+            .menu {
+                border-right: 2px solid #e8e8e8;
+                flex: 20%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 27px;
+                padding-right: 27px;
+                padding-top: 24px;
+            }
+            .menu a {
+                text-decoration: none;
+                color: #4f5665;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: -0.6%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 10px;
+                padding: 10px;
+                
+            }
+            .menu a:last-child {
+                color: #d00000;
+            }
+            .menu a:hover {
+                background-color:  #2949ff2d;
+                
+                color: #4f5665;
+                border-radius: 8px;
+            }
+
+            .menu-dashboard::before {
+                content: url("../assets/dashboard/dashboard-logo-grey.svg");
+            }
+            .menu-transfer::before {
+                content: url("../assets/dashboard/transfer-logo-grey.svg");
+            }
+            .menu-history::before {
+                content: url("../assets/dashboard/history-logo-grey.svg");
+            }
+            .menu-top-up::before {
+                content: url("../assets/dashboard/top-up-logo-grey.svg");
+            }
+            .menu-logout::before {
+                content: url("../assets/dashboard/logout-logo-red.svg");
+            }
+        </style>
+    </head>
+    <body>
+        <aside class="menu">
+            <a href="#" class="menu-dashboard"> Dashboard </a>
+            <a href="#" class="menu-transfer"> Transfer </a>
+            <a href="#" class="menu-history"> History </a>
+            <a href="#" class="menu-top-up"> Top Up </a>
+            <a href="#" class="menu-logout"> Logout </a>
+        </aside>
+    </body>
+</html>

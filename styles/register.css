@@ -1,136 +1,224 @@
 * {
-                font-family: "Montserrat", "sans-serif";
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
+    font-family: "Montserrat", "sans-serif";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
 
-            body {
-                background-color: rgba(56, 104, 240, 1);
-            }
+body {
+    background-color: rgba(56, 104, 240, 1);
+}
 
-            .container {
-                display: flex;
-                width: 100hw;
-            }
-            .container-register {
-                background-color: #ffffff;
-                padding: 20px;
-                border-top-right-radius: 30px;
-                border-bottom-right-radius: 30px;
-                width: 650px;
-            }
-            
-            .register-main {
-                background-color: #ffffff;
-                border-top-right-radius: 40px;
-                border-bottom-right-radius: 40px;
-            }
+.container {
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+}
+.container-register {
+    background-color: #ffffff;
+    padding: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 650px;
+}
 
-            .heading {
-                font-weight: 500;
-                line-height: 36.57px;
-                font-size: 30px;
-                color: #0b132a;
-                margin-bottom: 13px;
-            }
-            .text {
-                font-weight: 400;
-                size: 16px;
-                line-height: 26.62px;
-                color: #4f5665;
-                margin-bottom: 13px;
-            }
+.register-main-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 13px;
+}
+.register-main-logo > p {
+    font-family: Nunito Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.28px;
+    color: #2948ff;
+}
 
-            .o-auth {
-                display: flex;
-                flex-direction: column;
-                gap: 13px;
-            }
+.heading {
+    font-weight: 500;
+    line-height: 36.57px;
+    font-size: 30px;
+    color: #0b132a;
+    margin-bottom: 13px;
+}
+.text {
+    font-weight: 400;
+    size: 16px;
+    line-height: 26.62px;
+    color: #4f5665;
+    margin-bottom: 13px;
+}
 
-            .sign-google,
-            .sign-facebook {
-                border: 1px solid #e8e8e8;
-                border-radius: 100px;
-                text-transform: capitalize;
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-                padding: 10px;
-                color: #4f5665;
-                font-weight: 500;
-            }
+.o-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
 
-            .or {
-                position: relative;
-                margin-bottom: 13px;
-            }
-            .or-text {
-                background-color: #ffffff;
-                padding: 0 50px;
-                position: absolute;
-                left: 40%;
-                bottom: -11px;
-                font-weight: 400;
-                line-height: 14.63px;
-                letter-spacing: 0.5;
-                font-size: 12px;
-                color: #aaaaaa;
-            }
-            .hr-or {
-                border: 1px solid #aaaaaa;
-            }
+.sign-google,
+.sign-facebook {
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    color: #4f5665;
+    font-weight: 500;
+}
 
-            form {
-                margin-top: 15px;
-            }
-            form > label {
-                display: block;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 19.5px;
-                color: #0b132a;
-            }
-            form > input {
-                padding: 14px 13px;
-                border: 1px solid #dedede;
-                width: 100%;
-                border-radius: 8px;
-                gap: 10px;
-            }
-            form > button {
-                margin: 10px 0;
-                width: 100%;
-                height: 50px;
-                border-radius: 6px;
-                border-style: none;
-                padding: 10px;
-                background-color: #2948ff;
-                color: #ffffff;
-                font-size: 16px;
-                line-height: 20px;
-                text-align: center;
-                font-weight: 500;
-            }
-            form > button:hover {
-                cursor: pointer;
-            }
-            form > p {
-                margin-top: 10px;
-                margin-bottom: 0;
-                text-align: center;
-            }
-            form > p > a {
-                text-decoration: none;
-            }
-            .form-register {
-                display: flex;
-                flex-direction: column;
-                gap: 13px;
-            }
+.or {
+    position: relative;
+    margin-bottom: 13px;
+}
+.or-text {
+    background-color: #ffffff;
+    padding: 0 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    line-height: 14.63px;
+    letter-spacing: 0.5;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+.hr-or {
+    border: 1px solid #aaaaaa;
+}
 
-            .register-logo {
-                background: rgb(123, 155, 255);
-                background-image: radial-gradient(circle, rgba(123, 155, 255, 1) 0%, rgba(56, 104, 240, 1) 87%);
-                width: 700px;
-            }
+form {
+    margin-top: 15px;
+}
+form > label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #0b132a;
+}
+form > input {
+    padding: 14px 13px;
+    border: 1px solid #dedede;
+    width: 100%;
+    border-radius: 8px;
+    gap: 10px;
+}
+form > button {
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    border-style: none;
+    padding: 10px;
+    background-color: #2948ff;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+form > button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+form > button:active {
+    transform: scale(0.9);
+}
+form > p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+form > p > a {
+    text-decoration: none;
+}
+.form-register {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.form-register input {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 10px;
+    background-size: 20px;
+    padding: 14px 39px;
+}
+.form-register input:nth-child(2) {
+        background-image: url("../assets/register/email-logo.svg");
+}
+.form-register input:nth-child(4),
+.form-register input:nth-child(6) {
+        background-image: url("../assets/register/password-logo.svg");
+
+}
+.register-logo {
+    background: rgb(123, 155, 255);
+    background-image: radial-gradient(circle, rgba(123, 155, 255, 1) 0%, rgba(56, 104, 240, 1) 87%);
+    width: 750px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: #ffffff;
+    }
+    .container {
+        justify-content: center;
+    }
+    .register-logo {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #ffffff;
+    }
+    .container {
+        width: 100%;
+        justify-content: center;
+    }
+    .register-logo {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container-register {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .register-logo {
+        display: none;
+    }
+    .o-auth {
+        display: flex;
+        flex-direction: column;
+    }
+    .signin {
+        display: flex;
+        justify-content: space-around;
+        content: "";
+    }
+    .sign-google p,
+    .sign-facebook p {
+        display: none;
+    }
+    .sign-google > img,
+    .sign-facebook > img {
+        border-radius: 50%;
+    }
+    .sign-google,
+    .sign-facebook {
+        border-color: #e8e8e8;
+        min-width: 161px;
+    }
+}

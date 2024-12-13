@@ -1,12 +1,12 @@
 * {
     font-family: "Montserrat", "sans-serif";
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     /* border: 1px solid red; */
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: #2948ff;
 }
 
@@ -26,10 +26,29 @@ body {
     flex: 50%;
 }
 
+.register-main-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 13px;
+}
+.register-main-logo > p {
+    font-family: Nunito Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.28px;
+    color: #2948ff;
+}
+
+.register-main-logo > img {
+    width: 24px;
+    height: 24px;
+}
+/* 
 .header img {
     width: 100%;
     height: auto;
-}
+} */
 .title {
     font-weight: 500;
     font-size: 30px;
@@ -113,6 +132,7 @@ form > button:hover {
 form > p {
     text-align: center;
     font-weight: 400;
+    margin-top: 13px;
 }
 form a {
     text-decoration: none;
@@ -126,6 +146,15 @@ form a {
 @media screen and (max-width: 412px) {
     body {
         background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .main-content,
@@ -177,12 +206,3 @@ form a {
         height: 736px;
     }
 }
-/* @media screen and (max-width: 1440px) {
-    body {
-        background-color: #2948ff;
-    }
-
-    .container-row {
-        height: 736px;
-    }
-} */

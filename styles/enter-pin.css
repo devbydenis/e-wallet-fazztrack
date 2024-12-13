@@ -1,138 +1,9 @@
-/* CSS RESET */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol,
-ul {
-    list-style: none;
-}
-blockquote,
-q {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-/* ----------------------------------------------------------------------------------------------------------- */
-/*  */
-/* ----------------------------------------------------------------------------------------------------------- */
-* {
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /* border: 1px solid red; */
 }
 body {
     background: rgb(57, 106, 252);
@@ -141,23 +12,24 @@ body {
 
 .container {
     display: flex;
+    width: 100%;
     flex-direction: row;
     background: rgb(57, 106, 252);
     background: radial-gradient(circle, rgba(57, 106, 252, 0.9810049019607843) 39%, rgba(41, 72, 255, 1) 87%);
 }
 .main {
-    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
     height: 100vh;
-    margin: 0;
-    padding: 10px 60px;
+    padding: 10px 20px;
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
 }
 .sub-main {
-    /* border: 1px solid red; */
-    margin-top: 25%;
     background-color: white;
 }
 .header img {
@@ -176,6 +48,7 @@ body {
     color: #4f5665;
     margin: 0;
 }
+
 .pin-container {
     text-align: center;
     height: 150px;
@@ -221,52 +94,84 @@ body {
     margin-top: 13px;
 }
 .form-reset-button > a {
- text-decoration: none;
+    text-decoration: none;
 }
 
 .second {
-    /* background: rgb(57, 106, 252);
-    background: radial-gradient(circle, rgba(57, 106, 252, 0.9810049019607843) 39%, rgba(41, 72, 255, 1) 87%); */
-    flex: 50%;
+    width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
+
 .img-second {
-    height: 100vh;
+    border: 1px solid red;
+
+    width: 70%;
 }
 
-/* Smartphone */
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 480px) {
     .container {
-     width: 100%; 
-     border: 1px solid red;
+        padding: auto 10px;
     }
     .main {
-        padding: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    .sub-main{
-        padding: 15px 5px 15px 5px;
-    }
-    .second {
-        visibility: hidden;
-        display: none;
+        width: 100%;
+        /* padding: auto 10px; */
+        background: rgb(57, 106, 252);
+        background: radial-gradient(circle, rgba(57, 106, 252, 0.9810049019607843) 39%, rgba(41, 72, 255, 1) 87%);
     }
 
+    .sub-main {
+        padding: 40px 17px;
+        border-radius: 8px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.94px;
+    }
+
+    .pin-container {
+        text-align: center;
+        height: 100px;
+    }
+    .pin-input-container {
+        gap: 5px;
+    }
+    .pin-input {
+        width: 35px;
+        height: 40px;
+        text-align: center;
+        font-size: 30px;
+        border: none;
+        border-bottom: 1px solid #2948ff;
+        background-color: transparent;
+        outline: none;
+        transition: border-color 0.3s;
+    }
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .img-second {
-    width: 100%;
-    height: auto;
+
+@media screen and (max-width: 768px) {
+    .second {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
+
+@media screen and (min-width: 768px) {
+    .img-second {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-
 }
