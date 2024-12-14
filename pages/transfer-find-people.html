@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
-        <link rel="stylesheet" href="../styles/transfer-find-people.css" />
+        <link rel="stylesheet" href="../styles/pages/transfer-find-people.css" />
         <title>Transfer - Find People</title>
     </head>
     <body>
@@ -47,8 +47,11 @@
                     </li>
                 </ul>
             </nav>
+            <section class="title-header">
+                <p>Profil</p>
+            </section>
         </header>
-        <section class="container">
+        <main class="container">
             <aside class="menu">
                 <a href="#">
                     <img src="../assets/dashboard/dashboard.png" alt="dashboard-button" />
@@ -98,28 +101,109 @@
                     <ul class="container-result-transfer">
                         <li class="item-list-result-transfer">
                             <img src="../assets/transfer/person-find.png" width="48" height="48" alt="result-person" />
-                            <p>Ghaluh</p>
-                            <p>(480)3175248</p>
-                            <label for="favorite-people" hidden>favorite</label>
-                            <input type="checkbox" name="favorite-people" id="favorite-people" />
+                            <div class="name-phone">
+                                <p>Ghaluh</p>
+                                <p>(480)3175248</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </label>
                         </li>
                         <li class="item-list-result-transfer">
                             <img src="../assets/transfer/person-find.png" width="48" height="48" alt="result-person" />
-                            <p>Ghaluh</p>
-                            <p>(480)3175248</p>
-                            <label for="favorite-people" hidden>favorite</label>
-                            <input type="checkbox" name="favorite-people" id="favorite-people" />
+                            <div class="name-phone">
+                                <p>Ghaluh</p>
+                                <p>(480)3175248</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </label>
                         </li>
                         <li class="item-list-result-transfer">
                             <img src="../assets/transfer/person-find.png" width="48" height="48" alt="result-person" />
-                            <p>Ghaluh</p>
-                            <p>(480)3175248</p>
-                            <label for="favorite-people" hidden>favorite</label>
-                            <input type="checkbox" name="favorite-people" id="favorite-people" />
+                            <div class="name-phone">
+                                <p>Ghaluh</p>
+                                <p>(480)3175248</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </label>
+                        </li>
+                        <li class="item-list-result-transfer">
+                            <img src="../assets/transfer/person-find.png" width="48" height="48" alt="result-person" />
+                            <div class="name-phone">
+                                <p>Ghaluh</p>
+                                <p>(480)3175248</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </label>
+                        </li>
+                        <li class="item-list-result-transfer">
+                            <img src="../assets/transfer/person-find.png" width="48" height="48" alt="result-person" />
+                            <div class="name-phone">
+                                <p>Ghaluh</p>
+                                <p>(480)3175248</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg class="star-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </label>
                         </li>
                     </ul>
                 </section>
             </article>
-        </section>
+            <aside class="menu-bottom">
+                <a href="#">
+                    <img src="../assets/dashboard/dashboard-logo-grey.svg" alt="transfer-button" />
+                    <p>Dashboard</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/transfer-logo-grey.svg" alt="transfer-button" />
+                    <p>Transfer</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/history-logo-grey.svg" alt="history-button" />
+                    <p>History</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/top-up-logo-grey.svg" alt="top-up-button" />
+                    <p>Top Up</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/profile-logo-svg.svg" alt="logout-button" />
+                    <p>Profile</p>
+                </a>
+            </aside>
+        </main>
     </body>
+    <script>
+        // logic favorite star
+        const starCheckbox = document.getElementById("starCheckbox");
+        const starSvg = document.querySelector(".star-svg");
+
+        starCheckbox.addEventListener("change", function () {
+            if (this.checked) {
+                starSvg.style.transform = "scale(1.2)";
+            } else {
+                starSvg.style.transform = "scale(1)";
+            }
+        });
+    </script>
 </html>
