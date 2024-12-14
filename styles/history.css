@@ -418,6 +418,7 @@ form {
 }
 
 @media screen and (max-width: 1024px) {
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -430,11 +431,13 @@ form {
         flex-direction: column;
     }
 }
+
 @media screen and (min-width: 768px) {
     .mobile-mode {
         display: none;
     }
 }
+
 @media screen and (max-width: 768px) {
     .title-header {
         display: inline-block;
@@ -469,12 +472,14 @@ form {
         display: none;
     }
 }
+
 @media screen and (min-width:576px) {
     .title-header,
     .menu-bottom {
         display: none;
     }
 }
+
 @media screen and (max-width: 576px) {
     nav {
         display: none;

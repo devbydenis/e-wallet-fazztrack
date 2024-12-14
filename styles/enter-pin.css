@@ -101,16 +101,21 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid red;
+    height: 100vh;
 }
 
 .img-second {
+    /* border: 1px solid red; */
+    max-width: 627px;
+    max-height: 700px;
     border: 1px solid red;
 
-    width: 70%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 567px) {
     .container {
         padding: auto 10px;
     }
