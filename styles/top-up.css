@@ -1,138 +1,6 @@
-/* CSS RESET */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol,
-ul {
-    list-style: none;
-}
-blockquote,
-q {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-* {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif !important;
 }
@@ -303,11 +171,11 @@ header nav ul li:nth-child(1) {
     width: 24px;
     height: 24px;
 }
-.transfer-process p:nth-child(2){
-    color: #2948ff
+.transfer-process p:nth-child(2) {
+    color: #2948ff;
 }
-.transfer-process p:nth-child(2) span:first-child{
-    background-color: #2948ff
+.transfer-process p:nth-child(2) span:first-child {
+    background-color: #2948ff;
 }
 
 /* TEMPLATE END*/
@@ -315,7 +183,6 @@ header nav ul li:nth-child(1) {
     flex: 80%;
     padding: 30px 30px;
     margin-bottom: 50px;
-
 }
 .people-information h3 {
     font-weight: 600;
@@ -326,7 +193,7 @@ header nav ul li:nth-child(1) {
 }
 .person-info {
     padding: 18px 30px;
-    background-color: #E8E8E84D;
+    background-color: #e8e8e84d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -345,7 +212,7 @@ header nav ul li:nth-child(1) {
 }
 .person-detail p:nth-child(1) {
     font-weight: 600;
-    font-size: 14px;    
+    font-size: 14px;
 }
 .person-detail p:nth-child(2) {
     font-weight: 400;
@@ -373,7 +240,7 @@ form {
     padding: 0px 30px;
 }
 
-.amount-transfer{
+.amount-transfer {
     margin-top: 16px;
 }
 .amount-transfer label,
@@ -389,10 +256,23 @@ form {
     font-weight: 400;
     font-size: 14px;
     line-height: 17.07px;
-    color: #4F5665;
+    color: #4f5665;
 }
-.amount-transfer input[name="nominal"]{
-height: 38px;
+.amount-transfer input[name="nominal"] {
+    height: 38px;
+    padding-left: 20px;
+}
+.form-input {
+    background-image: url("../assets/password-logo.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 10px;
+    background-size: 20px;
+    padding: 14px 39px;
+    
+}
+.amount-transfer input[placeholder] {
+    padding-left: 40px;
 }
 .amount-transfer input,
 .notes-transfer textarea {
@@ -400,9 +280,9 @@ height: 38px;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
     padding-left: 10px;
-    outline-style: none;   
-    margin-top: 15px; 
-    margin-bottom: 15px; 
+    outline-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .notes-transfer textarea[name="notes"] {
     height: 223px;
@@ -423,8 +303,6 @@ height: 38px;
 .button-submit-transfer:hover {
     opacity: 0.9;
 }
-
-
 
 .account-information {
     font-weight: 600;
@@ -456,7 +334,7 @@ height: 38px;
     border-radius: 8px;
 }
 .payment-method-list:nth-child(odd) {
-    background-color: #E8E8E84D;
+    background-color: #e8e8e84d;
 }
 .payment-method-list img {
     flex: 10%;
@@ -474,7 +352,7 @@ height: 38px;
 .payment-method-container {
     flex: 30%;
     padding: 130px 23px;
-    font-family: "Plus Jakarta Sans", sans-serif !important
+    font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 .list-payment {
     display: flex;
@@ -485,7 +363,7 @@ height: 38px;
     font-weight: 700;
     font-size: 14px;
     line-height: 17.64px;
-    color: #0B132A;
+    color: #0b132a;
 }
 .payment-method-container p {
     font-weight: 400;
@@ -494,3 +372,106 @@ height: 38px;
     color: #654f54;
     margin-top: 15px;
 }
+@media screen and (min-width: 1024px) {
+    .menu-bottom,
+    .title-header {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "menu main"
+            "menu payment";
+    }
+    .menu {
+        grid-area: menu;
+    }
+    .main {
+        grid-area: main;
+    }
+    .payment {
+        grid-area: payment;
+        padding: 0 60px;
+    }
+    .menu-bottom,
+    .title-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .menu,
+    .menu-bottom,
+    .title-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        display: none;
+    }  
+    .title-header {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        background-color: #2948ff;
+        color: #ffffff;
+    }
+    .container {
+        height: 130vh;
+    }
+    .main {
+        padding: 0;
+    }
+    .payment {
+        height: 0;
+        padding: 0 35px;
+    }
+    .top-up-title {
+        display: none;
+    }
+    .menu-bottom {
+        /* border: 1px solid red; */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12.19px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+        box-shadow: 0px -2px 20px 0px #00000014;
+        background-color: #ffffff;
+    }
+    .menu-bottom > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        margin: 16px 0;
+        text-decoration: none;
+        color: #4f5665;
+    }
+    .menu-bottom a > img {
+        width: 24px;
+    }
+}
+
+
