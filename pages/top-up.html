@@ -50,6 +50,9 @@
                     </li>
                 </ul>
             </nav>
+            <section class="title-header">
+                <p>Profil</p>
+            </section>
         </header>
         <main class="container">
             <aside class="menu">
@@ -77,7 +80,7 @@
                     Logout
                 </a>
             </aside>
-            <article class="container-top-up people-information">
+            <article class="container-top-up people-information main">
                 <section class="top-up-title head">
                     <img src="../assets/transfer/transfer-blue.png" alt="logo-transfer" />
                     <h3>Top Up Account</h3>
@@ -101,7 +104,8 @@
                     <section class="amount-transfer">
                         <label for="nominal">Amount</label>
                         <p>Type the amount you want to transfer and then press continue to the next steps.</p>
-                        <input type="nominal" id="nominal" name="nominal" placeholder="Enter Your Nominal" class="img-inside" style="background-image: url('../assets/')" />
+                        <!-- <input class="nominal-amount-transfer" type="nominal" id="nominal" name="nominal" placeholder="Enter Your Nominal" class="img-inside" style="background-image: url('../assets/')" /> -->
+                        <input class="form-input" type="number" id="amount" name="amount" placeholder="Type the amount you want to transfer" required />
                     </section>
                     <section class="payment-method amount-transfer">
                         <h3 class="payment-method-title">Payment</h3>
@@ -134,7 +138,7 @@
                     </section>
                 </form>
             </article>
-            <aside class="payment-method-container">
+            <aside class="payment-method-container payment">
                 <h3 class="payment-title">Payment</h3>
                 <div class="list-payment">
                     <p>Order</p>
@@ -151,6 +155,30 @@
                 <!-- <button type="button">Submit</button> -->
                 <button class="button-submit-transfer" type="submit">Submit & Transfer</button>
                 <p>*Get Discount if you pay with Bank Central Asia</p>
+            </aside>
+            <aside class="menu-bottom">
+                <a href="#">
+                    <img src="../assets/dashboard/dashboard-logo-grey.svg" alt="transfer-button" />
+                    <p>Dashboard</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/transfer-logo-grey.svg" alt="transfer-button" />
+                    <p>Transfer</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/history-logo-grey.svg" alt="history-button" />
+                    <p>History</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/top-up-logo-grey.svg" alt="top-up-button" />
+                    <p>Top Up</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/profile-logo-svg.svg" alt="logout-button" />
+                    <p>Profile</p>
+                </a>
             </aside>
         </main>
     </body>
