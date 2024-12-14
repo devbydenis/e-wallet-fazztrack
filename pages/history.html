@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../styles/history.css" />
         <title>History Transsaction</title>
     </head>
@@ -46,10 +48,13 @@
                                     Logout</a
                                 >
                             </div>
-                        </div>
+                        </div>   
                     </li>
                 </ul>
             </nav>
+            <section class="title-header">
+                <p>History Transaction</p>
+            </section>
         </header>
         <main class="container">
             <aside class="menu">
@@ -84,54 +89,99 @@
                 </section>
                 <!-- <h3 class="account-information">Find Transaction</h3> -->
                 <section class="transaction-history">
-                    <section class="transaction-history-title">
+                    <form class="transaction-history-title">
                         <h2>Find Transaction</h2>
-                        <a href="#">See All</a>
-                    </section>
-                    <ul>
+                        <label for="search-transaction">
+                            <input class="search-transaction" type="text" id="search-transaction" name="search-transaction" placeholder="Enter Number Or Full Name" />
+                        </label>
+                    </form>
+                    <ul class="transaction-history-result">
                         <li class="card-transaction-history">
                             <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
                             <div class="card-info-transaction-history">
-                                <p>Yanti</p>
+                                <p>Nunung</p>
+                                <p>Transfer</p>
+                            </div>
+                            <div class="card-phone-number-transaction-history">
+                                <p class="mobile-mode">Nunung</p>
+                                <p>08221234567</p>
+                            </div>
+                            <div class="card-nominal-transfer">
+                                <p>+Rp50.000</p>
+                            </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000">
+                                    <path
+                                        d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+                                    />
+                                </svg>
+                            </label>
+                        </li>
+                        <li class="card-transaction-history">
+                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
+                            <div class="card-info-transaction-history">
+                                <p>Nunung</p>
                                 <p>Transfer</p>
                             </div>
                             <div class="card-phone-number-transaction-history">
                                 <p>08221234567</p>
                             </div>
                             <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
+                                <p style="color: red">+Rp50.000</p>
                             </div>
+                            <label class="star-checkbox">
+                                <input type="checkbox" id="starCheckbox" />
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000">
+                                    <path
+                                        d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+                                    />
+                                </svg>
+                            </label>
                         </li>
-                        <li class="card-transaction-history">
-                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
-                            <div class="card-info-transaction-history">
-                                <p>Yanti</p>
-                                <p>Transfer</p>
-                            </div>
-                            <div class="card-phone-number-transaction-history">
-                                <p>08221234567</p>
-                            </div>
-                            <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
-                            </div>
-                        </li>
-                        <li class="card-transaction-history">
-                            <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
-                            <div class="card-info-transaction-history">
-                                <p>Yanti</p>
-                                <p>Transfer</p>
-                            </div>
-                            <div class="card-phone-number-transaction-history">
-                                <p>08221234567</p>
-                            </div>
-                            <div class="card-nominal-transfer">
-                                <p>+Rp50.000</p>
-                            </div>
-                        </li>
-
                     </ul>
+                    <div class="pagination-history">
+                        <p>Show 5 History of 100 History</p>
+                        <ul>
+                            <li>Prev</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>Next</li>
+                        </ul>
+                    </div>
                 </section>
             </article>
+                        <aside class="menu-bottom">
+                <a href="#">
+                    <img src="../assets/dashboard/dashboard-logo-grey.svg" alt="transfer-button" />
+                    <p>Dashboard</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/transfer-logo-grey.svg" alt="transfer-button" />
+                    <p>Transfer</p>
+                </a>
+                <a href="#">
+                    <img src="../assets/dashboard/history-logo-grey.svg" alt="history-button" />
+                    <p>History</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/top-up-logo-grey.svg" alt="top-up-button" />
+                    <p>Top Up</p>
+                </a>
+
+                <a href="#">
+                    <img src="../assets/dashboard/profile-logo-svg.svg" alt="logout-button" />
+                    <p>Profile</p>
+                </a>
+            </aside>
         </main>
     </body>
 </html>

@@ -1,148 +1,19 @@
-/* CSS RESET */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol,
-ul {
-    list-style: none;
-}
-blockquote,
-q {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------------------------------- */
-* {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif !important;
 }
 
+header nav {
+    width: 100%;
+}
 header nav ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     border: 1px solid #e8e8e8;
-    padding: 14px 79px 14px 44px;
+    padding: 14px 44px;
 }
 header nav ul .z-wallet-logo img {
     width: 150px;
@@ -178,33 +49,32 @@ header nav ul li:nth-child(1) {
     right: 10px;
     border-radius: 8px;
     padding: 20px;
-    background-color: #FFFFFF;
-
+    background-color: #ffffff;
 }
 .dropdown-content a {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #2948FF;
-    background-color: #FFFFFF;
+    color: #2948ff;
+    background-color: #ffffff;
     padding: 12px 16px;
     text-decoration: none;
 }
 .dropdown-content a:first-child:hover {
-    background-color: #2948FF;
-    color: #FFFFFF;
+    background-color: #2948ff;
+    color: #ffffff;
     border-radius: 8px;
 }
 .dropdown-content a:nth-child(2) {
-    color: #D00000;
+    color: #d00000;
 }
-.dropdown-content a:nth-child(2):hover  {
-    background-color: #D00000;
+.dropdown-content a:nth-child(2):hover {
+    background-color: #d00000;
     color: #ffffff;
     border-radius: 8px;
 }
 .dropdown:hover .dropdown-content {
-    display: block;;
+    display: block;
 }
 
 .dashboard-name {
@@ -226,30 +96,35 @@ header nav ul li:nth-child(1) {
 }
 
 .container {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "menu chart history";
 }
 
 .chart {
+    grid-area: chart;
     padding: 44px 30px;
 }
 
 .menu {
+    grid-area: menu;
     /* border: 1px solid red; */
-    border-right: 1px solid #E8E8E8;
+    border-right: 1px solid #e8e8e8;
     flex: 20%;
     display: flex;
     flex-direction: column;
     padding-left: 27px;
     padding-right: 27px;
     padding-top: 24px;
-
 }
-.menu a{
+.menu a {
     /* border: 1px solid red; */
     text-decoration: none;
-    color: #4F5665;
+    color: #4f5665;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -261,10 +136,10 @@ header nav ul li:nth-child(1) {
     padding: 10px;
 }
 .menu a:last-child {
-    color: #D00000;
+    color: #d00000;
 }
 .menu a:hover {
-    background-color: #2948FF;
+    background-color: #2948ff;
     color: #ffffff;
     border-radius: 8px;
 }
@@ -272,6 +147,7 @@ header nav ul li:nth-child(1) {
     flex: 50%;
 }
 .transaction-history {
+    grid-area: history;
     flex: 30%;
 }
 
@@ -279,7 +155,6 @@ header nav ul li:nth-child(1) {
     display: flex;
     justify-content: space-between;
     gap: 17px;
-
 }
 .card-cash-flow {
     width: 222px;
@@ -291,7 +166,7 @@ header nav ul li:nth-child(1) {
     justify-content: center;
     align-items: start;
     padding: 15px;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #e8e8e8;
     gap: 5px;
 }
 .card-title-cash-flow {
@@ -322,15 +197,15 @@ header nav ul li:nth-child(1) {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #00A700;
+    color: #00a700;
 }
 .card-trend-cash-flow svg {
     width: 16px;
-    height: 16px
+    height: 16px;
 }
 
 .fast-service {
-    border: 1px solid #E8E8E8;
+    border: 1px solid #e8e8e8;
     display: flex;
     justify-content: space-between;
     padding: 18px 16px;
@@ -340,18 +215,18 @@ header nav ul li:nth-child(1) {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0,6%;
-    color: #0B132A;
+    letter-spacing: -0, 6%;
+    color: #0b132a;
 }
 .button-fast-service {
     display: flex;
     gap: 14px;
 }
-.button-fast-service button{
+.button-fast-service button {
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: #2948FF;
+    background-color: #2948ff;
     color: #ffffff;
     border-radius: 6px;
     border-style: none;
@@ -377,8 +252,8 @@ header nav ul li:nth-child(1) {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0,6%;
-    color: #0B132A;
+    letter-spacing: -0, 6%;
+    color: #0b132a;
 }
 .selection {
     display: flex;
@@ -386,7 +261,7 @@ header nav ul li:nth-child(1) {
 }
 .selection select {
     border-style: none;
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
     padding: 10px;
     border-radius: 6px;
     font-weight: 500;
@@ -397,7 +272,7 @@ header nav ul li:nth-child(1) {
 }
 
 .transaction-history {
-    border: 1px solid #E8E8E8;
+    border: 1px solid #e8e8e8;
     border-radius: 8px;
     margin-top: 44px;
 }
@@ -410,16 +285,16 @@ header nav ul li:nth-child(1) {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0,6%;
-    color: #0B132A;
+    letter-spacing: -0, 6%;
+    color: #0b132a;
 }
 .transaction-history-title a {
     text-decoration: none;
     font-weight: 500;
     font-size: 12px;
     line-height: 24px;
-    letter-spacing: -0,6%;
-    color: #2948FF;
+    letter-spacing: -0, 6%;
+    color: #2948ff;
 }
 .card-transaction-history {
     /* border: 1px solid #E8E8E8; */
@@ -433,14 +308,14 @@ header nav ul li:nth-child(1) {
 }
 .card-transaction-history img {
     width: 56px;
-    height: 56px;    
+    height: 56px;
     border-radius: 8px;
 }
 .card-transaction-history p {
     font-weight: 600;
     font-size: 16px;
     line-height: 19.5px;
-    color: #1EC15F;   
+    color: #1ec15f;
 }
 .card-info-transaction-history {
     display: flex;
@@ -451,12 +326,114 @@ header nav ul li:nth-child(1) {
     font-weight: 600;
     font-size: 16px;
     line-height: 19.5px;
-    color: #0B132A;
+    color: #0b132a;
 }
 .card-info-transaction-history p:nth-child(2) {
     font-weight: 400;
     font-size: 16px;
     line-height: 19.5px;
-    color: #4F5665;
+    color: #4f5665;
 }
 
+@media screen and (min-width: 1024px) {
+    .tablet-mode {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "chart"
+            "history";
+    }
+    .menu {
+        display: none;
+    }
+    .transaction-history {
+        border: 1px solid red;
+    }
+    .transaction-history > ul {
+        border: 1px solid red;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .tablet-mode {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #2948ff;
+    }
+    header nav ul li {
+        flex-direction: row-reverse;
+    }
+    .dashboard-name {
+        color: #ffffff;
+    }
+    header nav ul > .z-wallet-logo {
+        display: none;
+    }
+    .dropdown button {
+        background-color: #2948ff;
+    }
+    .dropdown button svg {
+        fill: #ffffff;
+    }
+    .dropdown-content {
+        top: 60px;
+        left: 0;
+        border: 1px solid #2948ff;
+    }
+
+    .chart {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .fast-service {
+        display: none;
+    }
+    .tablet-mode {
+        border: 1px solid red;
+        width: 100%;
+        display: flex;
+        gap: 23px;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .tablet-mode > button {
+        border: 1px solid red;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+        height: 45px;
+        gap: 5px;
+        background-color: #2948ff;
+        color: #ffffff;
+        border-radius: 6px;
+        border-style: none;
+        padding: 10px;
+        width: 116px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+}
