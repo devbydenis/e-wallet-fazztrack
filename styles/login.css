@@ -12,15 +12,23 @@ body {
 
 .container-row {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    /* flex-wrap: wrap; */
 }
 .main-content {
     flex: 50%;
+    height: 100%;
     margin: 0;
-    padding: 10px 20px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    padding: 30px 70px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: #ffffff;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 }
 .side-logo {
     flex: 50%;
@@ -61,6 +69,7 @@ body {
 }
 
 .o-auth {
+    margin-top: 13px;
     display: flex;
     flex-direction: column;
     gap: 13px;
@@ -83,23 +92,36 @@ body {
     background-color: #e8e8e8;
 }
 .or {
-    text-align: center;
-}
-.or-text {
     position: relative;
-    left: 45%;
-    bottom: -26px;
-    color: #aaaaaa;
-    background-color: #ffff;
-    width: 50px;
     text-align: center;
 }
-hr {
-    border: 1px solid #aaaaaa75;
+.or > .or-horizontal > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 0 20px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    letter-spacing: 0.005em;
+    color: #aaaaaa;
+}
+.or > .or-horizontal {
+    position: relative;
+    border: 0.5px solid #dedede;
+    width: 100%;
 }
 
 .form-login-input {
     margin-top: 13px;
+}
+.form-login-input label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
 }
 .form-login-input input {
     margin-top: 13px;
@@ -143,7 +165,7 @@ form a {
     background: radial-gradient(circle, rgba(57, 106, 252, 0.9810049019607843) 39%, rgba(41, 72, 255, 1) 87%);
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 576px) {
     body {
         background-color: #ffffff;
         display: flex;
@@ -185,16 +207,24 @@ form a {
     }
 
     .container-row {
-        height: auto;
+        border: 1px solid red;
+        height: 100vh;
     }
     .side-logo {
+        display: none;
         flex: 50%;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
+    .main-content {
+        /* border-style: none; */
+        border: 1px solid red;
+        border-radius: 0;
+        padding: auto 0;
+    }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (max-width: 1024px) {
     body {
         background-color: #2948ff;
     }
@@ -202,7 +232,9 @@ form a {
     .side-logo {
         flex: 50%;
     }
+    .side-logo > img {
+        max-width: 400px;
+    }
     .container-row {
-        height: 736px;
     }
 }
