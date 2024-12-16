@@ -75,7 +75,7 @@
                     Logout
                 </a>
             </aside>
-            <article class="people-information">
+            <article class="people-information" style="border: 1px solid red">
                 <section class="head">
                     <img src="../assets/transfer/transfer-blue.png" alt="logo-transfer" />
                     <h2>Transfer Money</h2>
@@ -116,7 +116,7 @@
                         <p>You can add some notes for this transfer such as payment coffee or something</p>
                         <textarea name="notes" id="notes"></textarea>
                     </div>
-                    <button class="button-submit-transfer" type="submit">Submit & Transfer</button>
+                    <button class="button-submit-transfer" type="submit" onclick="triggerModal()">Submit & Transfer</button>
                 </form>
             </article>
         </main>
@@ -125,7 +125,7 @@
             <section class="modal-content">
                 <section class="form-verification">
                     <p class="transfer-destination-name">transfer to ghaluh 1</p>
-                    <hr>
+                    <hr />
                     <form action="">
                         <h1 class="form-verification-title">Enter Your Pin 👋</h1>
                         <p class="form-verification-text">enter your pin for transaction</p>
@@ -146,5 +146,6 @@
             </section>
         </section>
         <!-- Modal -->
+        <script src="./enter-pin.js"></script>
     </body>
 </html>
