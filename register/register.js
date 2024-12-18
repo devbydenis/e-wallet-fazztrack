@@ -1,87 +1,132 @@
-const form = document.getElementById("form-register");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
-const smallText = document.querySelector(".regist-fail");
+const form = document.querySelector("#form-register");
+const emailInput = document.querySelector("#email");
+const passwordInput = document.querySelector("#password");
+const confirmPasswordInput = document.querySelector("#confirm-password");
+const checkboxPassword = document.querySelector("#checkbox");
+const criteriaEmail = (email) => {
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regexEmail.test(email);
+};
+const criteriaPassword = (password) => {
+    return password.length >= 8;
+};
+const setError = (element, message) => {
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector("small");
+
+    errorDisplay.textContent = message;
+    inputControl.classList.add("error");
+    inputControl.classList.remove("success");
+};
+const setSuccess = (element) => {
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector("small");
+
+    errorDisplay.textContent = "";
+    inputControl.classList.add("success");
+    inputControl.classList.remove("error");
+};
+const validateEmailField = () => {
+    const emailValue = emailInput.value.trim();
+
+    if (emailValue === "") {
+        setError(emailInput, "Email tidak boleh kosong!");
+        return false;
+    } else if (!criteriaEmail(emailValue)) {
+        setError(emailInput, "Masukkan email yang valid!");
+        return false;
+    } else {
+        setSuccess(emailInput);
+        return true;
+    }
+};
+const validatePasswordField = () => {
+    const passwordValue = passwordInput.value.trim();
+
+    if (passwordValue === "") {
+        setError(passwordInput, "Password tidak boleh kosong!");
+        return false;
+    } else if (!criteriaPassword(passwordValue)) {
+        setError(passwordInput, "Password minimal 8 karakter!");
+        return false;
+    } else {
+        setSuccess(passwordInput);
+        return true;
+    }
+};
+const validateConfirmPasswordField = () => {
+    const passwordValue = passwordInput.value.trim();
+    const confirmPasswordValue = confirmPasswordInput.value.trim();
+
+    if (confirmPasswordValue === "") {
+        setError(confirmPasswordInput, "Konfirmasi password tidak boleh kosong");
+        return false;
+    } else if (confirmPasswordValue !== passwordValue) {
+        setError(confirmPasswordInput, "Konfirmasi password tidak sesuai");
+        return false;
+    } else {
+        setSuccess(confirmPasswordInput);
+        return true;
+    }
+};
+
+emailInput.addEventListener("input", validateEmailField);
+
+passwordInput.addEventListener("input", () => {
+    validatePasswordField();
+    validateConfirmPasswordField();
+});
+
+confirmPasswordInput.addEventListener("input", validateConfirmPasswordField);
+
+function showPassword() {
+    if (checkboxPassword.checked) {
+        passwordInput.type = "text";
+        confirmPasswordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+        confirmPasswordInput.type = "password";
+    }
+}
+function showModal() {
+    const modal = document.getElementById("myModal");
+    const cancel = document.querySelector(".cancel");
+
+    modal.style.display = "block";
+
+    cancel.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const dataRegister = checkInputs();
-    if (dataRegister !== null && Object.keys(dataRegister).length > 1) {
+    const isEmailValid = validateEmailField();
+    const isPasswordValid = validatePasswordField();
+    const isConfirmPasswordValid = validateConfirmPasswordField();
+    const dataRegister = {
+        email: emailInput.value,
+        password: passwordInput.value,
+    };
+
+    // console.log(emailInput.value);
+    // console.log(passwordInput.value);
+
+    if (isEmailValid && isPasswordValid && isConfirmPasswordValid) {
+        // Jika validasi berhasil
         localStorage.setItem("user", JSON.stringify(dataRegister));
         location.href = "../login/login.html";
     } else {
-        smallText.textContent = "Please Check Your Password or Email Correctly";
-        smallText.style.color = "red";
-        smallText.removeAttribute("hidden");
+        // Jika validasi gagal
+        console.log("Validasi Gagal");
+        showModal();
+        throw new Error("Register failed! Make sure data is correct!");
     }
-
 });
-
-function checkInputs() {
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const confirmPasswordValue = confirmPassword.value.trim();
-    const data = {};
-
-    if (emailValue === "") {
-        setErrorFor(email, "Email cannot be blank");
-    } else {
-        setSuccessFor(email);
-        data.email = emailValue;
-    }
-
-    if (passwordValue === "") {
-        setErrorFor(password, "Password cannot be blank");
-    } else {
-        setSuccessFor(password, "");
-    }
-
-    if (confirmPasswordValue === "") {
-        setErrorFor(confirmPassword, "Password cannot be blank");
-    } else if (passwordValue !== confirmPasswordValue) {
-        setErrorFor(confirmPassword, "Password doesn't match");
-    } else {
-        setSuccessFor(confirmPassword);
-        data.password = passwordValue;
-    }
-
-    return data.email && data.password ? data : null;
-}
-
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const smallText = formControl.querySelector("small");
-    formControl.className = "input-control error";
-    smallText.innerText = message;
-}
-
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = "input-control success";
-}
-
-function showPassword() {
-    const x = document.querySelector("#password");
-    const y = document.querySelector("#confirm-password");
-    if (x.type === "password" && y.type === "password") {
-        x.type = "text";
-        y.type = "text";
-    } else {
-        x.type = "password";
-        y.type = "password";
-    }
-}
-
-// function validateEmail(email) {
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     return emailRegex.test(email);
-// }
-
-// function validatePassword(password) {
-//     // Password harus minimal 8 karakter
-//     // Mengandung minimal 1 huruf besar, 1 huruf kecil, 1 angka, dan 1 karakter khusus
-//     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-//     return passwordRegex.test(password);
-// }
