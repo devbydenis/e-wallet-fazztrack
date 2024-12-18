@@ -179,6 +179,10 @@ form a {
         align-items: center;
     }
 
+.main-content {
+    padding: 20px;
+}
+
     .main-content,
     .side-logo {
         width: 100%;

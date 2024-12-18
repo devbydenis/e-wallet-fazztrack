@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
-        <link rel="stylesheet" href="../styles/transfer-set-nominal.css" />
+        <!-- <link rel="stylesheet" href="../styles/transfer-set-nominal.css" /> -->
         <link rel="stylesheet" href="../styles/modal/transfer-enter-pin.css" />
         <title>Transfer - Enter Pin</title>
     </head>
@@ -75,7 +75,7 @@
                     Logout
                 </a>
             </aside>
-            <article class="people-information" style="border: 1px solid red">
+            <article class="people-information">
                 <section class="head">
                     <img src="../assets/transfer/transfer-blue.png" alt="logo-transfer" />
                     <h2>Transfer Money</h2>
@@ -109,14 +109,14 @@
                     <div class="amount-transfer">
                         <label for="nominal">Amount</label>
                         <p>Type the amount you want to transfer and then press continue to the next steps.</p>
-                        <input type="nominal" id="nominal" name="nominal" placeholder="Enter Your Nominal" class="img-inside" style="background-image: url('../assets/')" />
+                        <input type="number" id="nominal" name="nominal" placeholder="Enter Your Nominal" class="img-inside" style="background-image: url('../assets/')" />
                     </div>
                     <div class="notes-transfer">
                         <label for="notes">Notes</label>
                         <p>You can add some notes for this transfer such as payment coffee or something</p>
                         <textarea name="notes" id="notes"></textarea>
                     </div>
-                    <button class="button-submit-transfer" type="submit" onclick="triggerModal()">Submit & Transfer</button>
+                    <button class="button-submit-transfer" type="submit">Submit & Transfer</button>
                 </form>
             </article>
         </main>
@@ -139,13 +139,13 @@
                                 <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
                             </div>
                         </div>
-                        <button type="submit" class="form-button">Next</button>
+                        <button type="submit" class="form-button" id="modal-btn">Next</button>
                         <p class="form-reset-button">Forget Your Pin? <a href="./register.html">Reset</a></p>
                     </form>
                 </section>
             </section>
         </section>
         <!-- Modal -->
-        <script src="./enter-pin.js"></script>
+        <script src="../validation/transfer-enter-pin.js"></script>
     </body>
 </html>

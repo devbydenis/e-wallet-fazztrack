@@ -139,6 +139,7 @@ main {
 .brands > ul {
     display: flex;
     justify-content: space-evenly;
+    list-style: none;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -216,6 +217,7 @@ main {
 .feature-app {
     position: relative;
     height: auto;
+    margin-top: 30px;
 }
 .feature-app > .wrapper {
     display: flex;
@@ -227,6 +229,8 @@ main {
     /* gap: 200px; */
 }
 .wrapper {
+    padding: 20px;
+    background-color:#2948ff
 }
 .feature-app-logo > img {
     width: 182px;
@@ -235,6 +239,7 @@ main {
 }
 .feature-app-desc {
     /* width: 580px; */
+    padding: 10px;
     height: 460px;
     color: #ffffff;
     /* background-color: #2948ff; */
@@ -451,6 +456,10 @@ footer p {
     margin-top: 27px;
 }
 
+@media screen and (min-width: 768px){
+    
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
@@ -493,6 +502,8 @@ footer p {
     .e-wallet-logo-medium {
         display: none;
     }
+
+
 }
 @media screen and (min-width: 480px) {
     .e-wallet-logo-small {

@@ -237,6 +237,26 @@ header nav ul li:nth-child(1) {
     flex: 1%;
     text-align: end;
 }
+/* favorite star input */
+.star-checkbox {
+    position: relative;
+    cursor: pointer;
+}
+.star-checkbox input {
+    display: none;
+}
+.star-svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+.star-checkbox input:checked + .star-svg {
+    fill: gold;
+    transform: scale(1.1);
+}
+.star-svg {
+    fill: #ccc;
+}
 form {
     padding: 0px 30px;
 }
@@ -287,6 +307,8 @@ form {
 .button-submit-transfer:hover {
     opacity: 0.9;
 }
+
+
 
 @media screen and (min-width: 768px) {
     .title-header,
