@@ -6,9 +6,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
 
-        <link rel="stylesheet" href="../styles/login.css" />
+        <link rel="stylesheet" href="./login.css" />
         <title>Login</title>
     </head>
     <body>
@@ -30,11 +33,10 @@
                             <p>Or</p>
                         </div>
                         <!-- <p class="or-text">Or</p> -->
-
                     </div>
                 </section>
-                <section class="form-login">
-                    <form action="">
+                <section class="form-login" onsubmit="">
+                    <form action="" id="form-login">
                         <div class="form-login-input">
                             <label for="email">Email</label>
                             <input type="text" id="email" name="email" placeholder="Enter Your Email" class="img-inside" style="background-image: url('../assets/register/email-logo.svg')" />
@@ -43,6 +45,7 @@
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Enter Your Password" class="img-inside" style="background-image: url('../assets/register/password-logo.svg')" />
                         </div>
+                        <small id="fail" hidden></small>
                         <button type="submit">Login</button>
                         <p>Dont have an account? <a href="./register.html">Register</a></p>
                     </form>
@@ -53,4 +56,5 @@
             </section>
         </main>
     </body>
+    <script src="./login.js"></script>
 </html>

@@ -138,6 +138,7 @@ form > p {
 form > p > a {
     text-decoration: none;
 }
+
 .input-control {
     display: flex;
     flex-direction: column;
@@ -146,17 +147,17 @@ form > p > a {
 }
 .error > input[type="password"],
 .error > input[type="email"] {
-    border: 1px solid red
+    border: 1px solid red;
 }
 .error > small {
     color: red;
 }
 .success > input[type="email"],
 .success > input[type="password"] {
-    border: 1px solid rgb(46, 215, 46); 
+    border: 1px solid rgb(46, 215, 46);
 }
 .success > small {
-    color: rgb(46, 215, 46);
+    /* color: rgb(46, 215, 46); */
 }
 .input-control input {
     background-repeat: no-repeat;
@@ -165,15 +166,15 @@ form > p > a {
     background-size: 20px;
     padding: 14px 39px;
     border-style: none;
-    /* border: 2px solid red; */
     border-radius: 8px;
 }
+
 .input-control:nth-child(1) input {
-    background-image: url("../assets/register/email-logo.svg");
+    background-image: url("../../assets/register/email-logo.svg");
 }
 .input-control:nth-child(2) input,
 .input-control:nth-child(3) input {
-    background-image: url("../assets/register/password-logo.svg");
+    background-image: url("../../assets/register/password-logo.svg");
 }
 .register-logo {
     background: rgb(123, 155, 255);

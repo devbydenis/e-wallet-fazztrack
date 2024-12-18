@@ -22,15 +22,15 @@
                         <form action="">
                             <div class="pin-container">
                                 <div class="pin-input-container">
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
-                                    <input type="text" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
+                                    <input type="password" maxlength="1" pattern="[0-9]" class="pin-input" />
                                 </div>
                             </div>
-                            <button type="submit" class="form-button">Submit</button>
+                            <button type="submit" class="form-button" id="modal-btn">Submit</button>
                             <p class="form-reset-button">Forget Your Pin? <a href="./register.html">Reset</a></p>
                         </form>
                     </section>
@@ -41,4 +41,24 @@
             </aside>
         </main>
     </body>
+    <script>
+        const inputs = document.querySelectorAll(".pin-input")
+        const modalBtn = document.getElementById("modal-btn")
+
+        console.log(inputs)
+        console.log(modalBtn)
+
+        modalBtn.addEventListener("click", (event) => {
+            event.preventDefault()
+            const pin = []
+            
+            inputs.forEach(el => {
+                pin.push(el.value)
+            })
+
+            localStorage.setItem('pin', pin.join(''))
+
+            window.location.href = '../pages/transfer-enter-pin.html'
+        })
+    </script>
 </html>
