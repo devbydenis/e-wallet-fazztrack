@@ -74,6 +74,9 @@ body {
 .pin-input:focus {
     border-color: #0056b3;
 }
+.show-pin-field > label {
+    cursor: pointer;
+}
 .form-button {
     background-color: #2948ff;
     color: #ffffff;

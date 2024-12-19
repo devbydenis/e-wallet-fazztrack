@@ -10,6 +10,7 @@ const criteriaEmail = (email) => {
 const criteriaPassword = (password) => {
     return password.length >= 8;
 };
+
 const setError = (element, message) => {
     const inputControl = element.parentElement.parentElement;
     const errorDisplay = inputControl.querySelector("small");
@@ -26,6 +27,7 @@ const setSuccess = (element) => {
     inputControl.classList.add("success");
     inputControl.classList.remove("error");
 };
+
 const validateEmailField = () => {
     const emailValue = emailInput.value.trim();
 
