@@ -8,7 +8,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <title>Document</title>
         <style>
+            :root {
+                --blue: #2948ff;
+                --white: #ffffff;
+                --black: #0b132a;
+                ---grey: #4f5665;
+            }
             * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
                 font-family: "Montserrat", sans-serif;
                 text-decoration: none;
                 color: #2948ff;
@@ -29,16 +38,123 @@
                 margin-left: 15px;
                 margin-top: 15px;
             }
+
+            /* ---------------------- Navbar ---------------------- */
+            .navbar {
+                position: relative;
+                background-color: var(--blue);
+                padding: 21px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                gap: 10px;
+            }
+            .logo img {
+                width: 32px;
+                height: 32px;
+                /* object-fit: contain; */
+            }
+            .logo p {
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 1.25em;
+                font-weight: 600;
+                line-height: 27.28px;
+                color: var(--white);
+            }
+
+            .hamburger-menu {
+                color: #ffffff;
+                cursor: pointer;
+            }
+            .hamburger-menu > img:active {
+                transform: scale(0.9);
+            }
+
+            .sidebar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 99;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.804);
+            }
+            .nav-buttons {
+                position: relative;
+                left: 50%;
+                /* transform: translateX(100%); */
+                height: 100%;
+                width: 25%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 20px;
+                background-color: var(--white);
+                box-shadow: 0px 4px 25px 0px #00000026;
+                border-radius: 20px 0 0 20px;
+            }
+
+            .nav-buttons > a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .active {
+                display: block;
+            }
+
+            .nav-buttons > a {
+                width: 100%;
+                border-radius: 5px;
+                color: var(--blue);
+            }
+            .nav-buttons > a:hover {
+                outline: 2px solid #2948ff;
+            }
+
+            .btn {
+                padding: 10px 18px;
+                border-radius: 4px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                display: inline-block;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="logo">
+                    <a href="#">
+                        <img class="e-wallet-logo-medium" src="../assets/landing-page/wallet-logo.png" width="32" height="32" alt="Navigation" />
+                        <p>E-Wallet</p>
+                    </a>
+                </div>
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <!-- <span class="material-symbols-outlined"> menu </span> -->
+                    <img src="../assets/landing-page/hamburger-menu-right.svg" alt="" />
+                </div>
+            </nav>
+        </header>
+
         <h1>Weekly Task - Month 1 - Week 3</h1>
         <div class="container">
             <a href="../login/login.html" target="_blank">login</a>
             <a href="./register/register.html" target="_blank">register</a>
             <a href="./forget-password/forget-password.html" target="_blank">forget-password</a>
             <a href="./enter-pin/enter-pin.html" target="_blank">enter-pin</a>
-            <a href="./landing-page/landing-page-second.html" target="_blank">landing-page</a>
+            <a href="./landing-page/landing-page.html" target="_blank">landing-page</a>
             <a href="./dashboard/dashboard.html" target="_blank">dashboard</a>
             <a href="./history-transaction/history.html" target="_blank">history</a>
             <details>
@@ -57,5 +173,31 @@
             <a href="./change-pin/change-pin.html" target="_blank">change-pin</a>
             <a href="./change-password/change-password.html" target="_blank">change-password</a>
         </div>
+
+         <!-- Modal sidebar -->
+        <div class="sidebar">
+            <div class="nav-buttons">
+                <!-- <a href="../login/login.html" class="btn btn-signin">Sign In</a>
+                <a href="../register/register.html" class="btn btn-signup">Sign Up</a> -->
+            </div>
+        </div>
+        <!-- Modal sidebar -->
     </body>
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        const body = document.querySelector("body");
+        const brandsLogo = document.querySelector(".brands-logo").cloneNode(true);
+        const brandsLogoContainer = document.querySelector(".brands-logo-container");
+        brandsLogoContainer.appendChild(brandsLogo);
+
+        function toggleMenu() {
+            sidebar.classList.toggle("active");
+            body.style.overflowY = "hidden";
+        }
+
+        sidebar.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+            body.style.overflowY = "visible";
+        });
+    </script>
 </html>

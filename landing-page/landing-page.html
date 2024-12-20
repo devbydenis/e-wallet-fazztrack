@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="./landing-page.css" />
         <title>Landing Page</title>
@@ -13,145 +16,167 @@
         <header>
             <nav class="navbar" id="navbar">
                 <div class="logo">
-                    <a href="./pages/landing-page.html">
-                        <img class="e-wallet-logo-medium" src="../assets/landing-page/e-wallet-nav.png" alt="Navigation" />
-                        <img class="e-wallet-logo-small" src="../assets/landing-page/e-wallet-nav.png" alt="" />
+                    <a href="#">
+                        <img class="e-wallet-logo-medium" src="../assets/landing-page/wallet-logo.png" width="32" height="32" alt="Navigation" />
+                        <p>E-Wallet</p>
                     </a>
                 </div>
                 <div class="hamburger-menu" onclick="toggleMenu()">
-                    <span class="material-symbols-outlined">menu</span>
-                     <img src="../assets/landing-page/hamburger-menu-right.svg" alt="">
-                </div>
-                <div class="nav-buttons" >  
-                    <a href="../pages/login.html" class="btn btn-signin">Sign In</a>
-                    <a href="../pages/register.html" class="btn btn-signup">Sign Up</a>
+                    <!-- <span class="material-symbols-outlined"> menu </span> -->
+                    <img src="../assets/landing-page/hamburger-menu-right.svg" alt="" />
                 </div>
             </nav>
         </header>
         <main>
             <section class="banner">
-                <section class="banner-left">
-                    <h1>Smart Way to Your Financial Business</h1>
-                    <p>We bring you a mobile app for banking problems that oftenly wasting much of your times.</p>
-                    <button type="button">Get Started</button>
-                    <div class="available-on">
-                        <p>Available On</p>
-                        <a href="#"><img src="../assets/landing-page/playstore.png" width="50" alt="" /></a>
-                        <a href="#"><img src="../assets/landing-page/appstore.png" width="50" alt="" /></a>
+                <div class="banner-title">
+                    <h1>Experience the Future of Digital Payments with e-wallet</h1>
+                </div>
+                <div class="banner-content">
+                    <div class="banner-description">
+                        <p>Simplify Your Life with Secure and Convenient Mobile Payments</p>
                     </div>
-                </section>
-                <section class="banner-right">
-                    <img src="../assets/landing-page/img-banner-right.png" alt="banner-right" />
-                </section>
-            </section>
-            <section class="brands" style="overflow: hidden;">
-                <ul>
-                    <li><img src="../assets/landing-page/microsoft-logo.png" width="135" height="93" alt="microsoft-logo" /></li>
-                    <li><img src="../assets/landing-page/dropbox-logo.png" width="135" height="93" alt="dropbox" /></li>
-                    <li><img src="../assets/landing-page/hm-logo.png" width="135" height="93" alt="hm-logo" /></li>
-                    <li><img src="../assets/landing-page/airbnb-logo.png" width="135" height="93" alt="airbnb-logo" /></li>
-                    <li><img src="../assets/landing-page/canon-logo.png" width="135" height="93" alt="canon-logo" /></li>
-                    <li><img src="../assets/landing-page/dell-logo.png" width="135" height="93" alt="dell-logo" /></li>
-                </ul>
+                    <div class="banner-download">
+                        <div class="banner-download-button">
+                            <button type="button">
+                                <img src="../assets/landing-page/playstore.png" alt="apple-logo" />
+                                Play Store
+                            </button>
+                            <button type="button">
+                                <img src="../assets/landing-page/appstore.png" alt="apple-log" />
+                                Apps Store
+                            </button>
+                        </div>
+                        <div class="banner-download-amount">
+                            <p>4.6M</p>
+                            <img src="../assets/landing-page/users.png" width="120" height="48" alt="people-downloaded" />
+                            <p>Around the world, we already have over 4.6 million happy user</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="../assets/landing-page/banner-image.png" alt="banner-image" />
+                </div>
             </section>
             <section class="about-app">
-                <div class="desc">
-                    <h2>About The Aplication</h2>
+                <div class="about-app-card">
+                    <div class="about-app-logo">
+                        <img src="../assets/landing-page/support-blue.svg" width="58" height="58" alt="about-app-logo" />
+                    </div>
+                    <div class="about-app-title">
+                        <p>24/7 Support</p>
+                    </div>
+                    <div class="about-app-description">
+                        <p>We have 24/7 contact support so you can contact us whenever you want and we will respond it.</p>
+                    </div>
+                </div>
+                <div class="about-app-card">
+                    <div class="about-app-logo">
+                        <img src="../assets/landing-page/data-privacy-blue.svg" width="58" height="58" alt="about-app-logo" />
+                    </div>
+                    <div class="about-app-title">
+                        <p>Data Privacy</p>
+                    </div>
+                    <div class="about-app-description">
+                        <p>We make sure your data is safe in our database and we will encrypt any data you submitted to us.</p>
+                    </div>
+                </div>
+                <div class="about-app-card">
+                    <div class="about-app-logo">
+                        <img src="../assets/landing-page/download-blue.svg" width="58" height="58" alt="about-app-logo" />
+                    </div>
+                    <div class="about-app-title">
+                        <p>Easy Download</p>
+                    </div>
+                    <div class="about-app-description">
+                        <p>Zwallet is 100% totally free to use it's now available on Google Play Store and App Store.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="get-started">
+                <div class="get-started-image">
+                    <img src="../assets/landing-page/get-started-image.png" width="335" height="158" alt="background-get-started" />
+                    <img src="../assets/landing-page/get-started-mobile-apps.png" width="138" height="210" alt="apps" />
+                </div>
+                <div class="get-started-welcome">
+                    <p>Welcome to E-Wallet</p>
+                    <h2>Your All-in-One Digital Payment Solution</h2>
+                    <p>
+                        Say goodbye to cash and hello to the future of payments! With e-wallet, you have the power of secure, fast, and convenient digital transactions right at your fingertips. Whether you're shopping, dining out, or
+                        sending money to loved ones, we've got you covered.
+                    </p>
+                    <button>Get Started</button>
+                </div>
+            </section>
+            <section class="features">
+                <div class="feature-image">
+                    <img src="../assets/landing-page/feature-image.png" width="333" height="333" alt="feature-image" />
+                </div>
+                <div class="features-e-wallet">
+                    <h2>All The Great Zwallet Features</h2>
                     <p>We have some great features from the application and it’s totally free to use by all users around the world.</p>
-                </div>
-                <div class="card-poin">
-                    <img src="../assets/landing-page/24-7-support.svg" alt="">
-                    <p>24/7 Support</p>
-                    <p>We have 24/7 contact support so you can contact us whenever you want and we will respond it.</p>
-                </div>
-                <div class="card-poin">
-                    <!-- <img src="../assets/landing-page/data-privacy.png" alt="data-privacy.png" /> -->
-                    <img src="../assets/landing-page/data-privacy.svg" alt="">
-                    <p>Data Privacy</p>
-                    <p>We make sure your data is safe in our database and we will encrypt any data you submitted to us.</p>
-                </div>
-                <div class="card-poin">
-                    <img src="../assets/landing-page/easy-download.svg" alt="download.png" />
-                    <p>Easy Download</p>
-                    <p>Zwallet is 100% totally free to use it’s now available on Google Play Store and App Store.</p>
+                    <ul>
+                        <li>Small Fee</li>
+                        <li>Data Secure</li>
+                        <li>User Friendly</li>
+                    </ul>
+                    <button>Get Started</button>
                 </div>
             </section>
-            <section class="feature-app">
-                <section class="wrapper" >
-                    <div class="feature-app-logo">
-                        <img src="../assets/landing-page/feature-app.png" alt="feature-app.png" />
+            <section class="partners">
+                <p>100+ Trusted Partners</p>
+                <p>We have reached global level and have 100+ brand partners around the globe.</p>
+                <div class="brands-logo-container">
+                    <div class="brands-logo">
+                        <img src="../assets/landing-page/microsoft-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/dropbox-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/hm-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/airbnb-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/canon-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/dell-logo.png" width="98" height="78" alt="" />
                     </div>
-                    <div class="feature-app-desc">
-                        <h2>All The Great Zwallet Features.</h2>
-                        <p>We have some great features from the application and it’s totally free to use by all users around the world.</p>
-                        <div class="feature">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2948FF">
-                                <path
-                                    d="M546.67-426.67q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM240-293.33q-27.5 0-47.08-19.59-19.59-19.58-19.59-47.08v-373.33q0-27.5 19.59-47.09Q212.5-800 240-800h613.33q27.5 0 47.09 19.58Q920-760.83 920-733.33V-360q0 27.5-19.58 47.08-19.59 19.59-47.09 19.59H240ZM333.33-360H760q0-39 27.17-66.17 27.16-27.16 66.16-27.16V-640q-39 0-66.16-27.17Q760-694.33 760-733.33H333.33q0 39-27.16 66.16Q279-640 240-640v186.67q39 0 66.17 27.16Q333.33-399 333.33-360ZM800-160H106.67q-27.5 0-47.09-19.58Q40-199.17 40-226.67V-680h66.67v453.33H800V-160ZM240-360v-373.33V-360Z"
-                                />
-                            </svg>
-                            <div class="feature-description">
-                                <p>Small Fee</p>
-                                <p>We only charge 5% of every success transaction done in Zwallet app.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2948FF">
-                                <path
-                                    d="M436.67-344 664-571.33l-47-46.34-178.33 178.34-95.34-95.34L295-486.33 436.67-344ZM480-80.67q-139.67-35-229.83-161.5Q160-368.67 160-520.67v-240l320-120 320 120v240q0 152-90.17 278.5Q619.67-115.67 480-80.67Zm0-69.33q111.33-36.33 182.33-139.67 71-103.33 71-231v-193.66L480-809.67l-253.33 95.34v193.66q0 127.67 71 231Q368.67-186.33 480-150Zm0-330Z"
-                                />
-                            </svg>
-                            <div class="feature-description">
-                                <p>Data Secure</p>
-                                <p>All your data is secured properly in our system and it’s encrypted.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2948FF">
-                                <path
-                                    d="M482.67-484.67q27-32 40.5-68.33t13.5-81q0-44.67-13.5-81t-40.5-68.33q70.66-8.67 122.33 33 51.67 41.66 51.67 116.33T605-517.67q-51.67 41.67-122.33 33ZM700-160v-102.67q0-46-22.67-86.16-22.66-40.17-74-68.5 132.34 20.66 189.17 58.16 56.83 37.5 56.83 96.5V-160H700Zm100-286v-93.33h-93.33V-606H800v-93.33h66.67V-606H960v66.67h-93.33V-446H800Zm-483.33-34.67q-66 0-109.67-43.66Q163.33-568 163.33-634T207-743.67q43.67-43.66 109.67-43.66t109.66 43.66Q470-700 470-634t-43.67 109.67q-43.66 43.66-109.66 43.66ZM0-160v-100q0-34.67 18.17-63.17 18.16-28.5 48.5-42.83 68.66-31.67 127.66-46.17t122.34-14.5q63.33 0 122 14.5Q497.33-397.67 566-366q30.33 14.33 48.83 42.83t18.5 63.17v100H0Zm316.67-387.33q37 0 61.83-24.84Q403.33-597 403.33-634t-24.83-61.83q-24.83-24.84-61.83-24.84t-61.84 24.84Q230-671 230-634t24.83 61.83q24.84 24.84 61.84 24.84Zm-250 320.66h500V-260q0-14.33-7.17-26.67Q552.33-299 538-306q-64-30.33-114.33-42.17-50.34-11.83-107-11.83Q260-360 210-348.17 160-336.33 94.67-306q-13 6.33-20.5 19t-7.5 27v33.33Zm250-407.33Zm0 407.33Z"
-                                />
-                            </svg>
-                            <div class="feature-description">
-                                <p>User Friendly</p>
-                                <p>Zwallet come up with modern and sleek design and not complicated.</p>
-                            </div>
-                        </div>
-                        <button class="feature-button" type="button">Get Started</button>
+                    <div class="brands-logo">
+                        <img src="../assets/landing-page/microsoft-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/dropbox-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/hm-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/airbnb-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/canon-logo.png" width="98" height="78" alt="" />
+                        <img src="../assets/landing-page/dell-logo.png" width="98" height="78" alt="" />
                     </div>
-                </section>
-                <section class="waves">
-                    <div class="waves-up"></div>
-                    <div class="waves-down"></div>
-                </section>
+                </div>
             </section>
-            <section class="testimoni">
-                <h2 class="testimoni-title">Here From Our Customer</h2>
-                <p class="testimoni-paragraph">We always do our best for our customers <br> to stay comfortable using the <br> applications we provide</p>
-                <div class="testimoni-wrapper">
-                    <!-- <button class="testimoni-button-left">kiri</button> -->
-                    <div class="testimoni-card">
-                        <img class="testimoni-avatar" src="../assets/landing-page/person-testi.png" alt="person-testi.png" />
-                        <p class="testimoni-name">Ayu Ting Ting</p>
-                        <img class="testimoni-rating" src="../assets/landing-page/person-rating.png" alt="person-rating.png" />
-                        <p class="testimoni-quote">‘‘</p>
-                        <p class="testimoni-description">“I use this app since 2 years ago and this is the best app that I’ve ever use in my entire life”</p>
+            <section class="testimonial">
+                <div class="testimonial-title">
+                    <p>What Our Users Are Saying</p>
+                </div>
+                <div class="testimonial-description">
+                    <p>Ready to experience the future of payments? Download e-wallet now and enjoy a world of convenience at your fingertips.</p>
+                </div>
+                <div class="testimonial-cards">
+                    <img src="../assets/landing-page/testimoni-image.png" width="58" height="58" alt="testimoni-image" />
+                    <p>James Bond</p>
+                    <img src="../assets/landing-page/rating.svg" alt="rating" />
+                    <strong>‘‘</strong>
+                    <p>I've been using the e-wallet for over two years now, and I'm very satisfied with the ease of use. This has completely changed the way I shop and conduct financial transactions.</p>
+                </div>
+            </section>
+            <section class="download-app">
+                <div class="download-app-desc">
+                    <p>Download The App</p>
+                    <p>Ready to experience the future of payments? Download e-wallet now and enjoy a world of convenience at your fingertips.</p>
+                    <div class="download-button-group">
+                        <button type="button">
+                            <img src="../assets/landing-page/playstore.png" alt="apple-logo" />
+                            Play Store
+                        </button>
+                        <button type="button">
+                            <img src="../assets/landing-page/apple-logo-blue.svg" alt="apple-log" />
+                            Apps Store
+                        </button>
                     </div>
-                    <div class="testimoni-card">
-                        <img class="testimoni-avatar" src="../assets/landing-page/person-testi.png" alt="person-testi.png" />
-                        <p class="testimoni-name">Ayu Ting Ting</p>
-                        <img class="testimoni-rating" src="../assets/landing-page/person-rating.png" alt="person-rating.png" />
-                        <p class="testimoni-quote">‘‘</p>
-                        <p class="testimoni-description">“I use this app since 2 years ago and this is the best app that I’ve ever use in my entire life”</p>
-                    </div>
-                    <div class="testimoni-card">
-                        <img class="testimoni-avatar" src="../assets/landing-page/person-testi.png" alt="person-testi.png" />
-                        <p class="testimoni-name">Ayu Ting Ting</p>
-                        <img class="testimoni-rating" src="../assets/landing-page/person-rating.png" alt="person-rating.png" />
-                        <p class="testimoni-quote">‘‘</p>
-                        <p class="testimoni-description">“I use this app since 2 years ago and this is the best app that I’ve ever use in my entire life”</p>
-                    </div> 
-                     <button class="testimoni-button-right">kanan</button>
+                </div>
+                <div class="download-app-image">
+                    <img src="../assets/landing-page/download-mobile.jpg" alt="download-mobile" />
                 </div>
             </section>
         </main>
@@ -163,11 +188,11 @@
                 </div>
                 <div class="footer-contact">
                     <h3>GET IN TOUCH</h3>
-                    <div class="phone">
+                    <div>
                         <img src="../assets/landing-page/phone-logo.svg" alt="telephone" />
                         <p>+62 5637 8882 9901</p>
                     </div>
-                    <div class="email">
+                    <div>
                         <img src="../assets/landing-page/email-logo.svg" alt="email" />
                         <p>contact@zwallet.com</p>
                     </div>
@@ -189,14 +214,42 @@
                 </div>
             </div>
             <hr />
-            <p>© Copyright 2022, All Rights Reserved by ClarityUI</p>
+            <div class="footer-copyright">
+                <p>© Copyright 2022, All Rights Reserved by ClarityUI</p>
+            </div>
         </footer>
-    </body> 
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById("navbar");
-            navbar.classList.toggle("active");
-        }
-    </script>
-    <script src="../validation/landing-page.js"></script>
+        <!-- Modal sidebar -->
+        <div class="sidebar">
+            <div class="nav-buttons">
+                <a href="../login/login.html" class="btn btn-signin">Sign In</a>
+                <a href="../register/register.html" class="btn btn-signup">Sign Up</a>
+                                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/dashboard-logo.svg" alt="sidebar-logo">
+                    Dashboard
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/transfer-logo.svg" alt="sidebar-logo">
+                    Transfer
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/history.svg" alt="sidebar-logo">
+                    History
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/topup-logo.svg" alt="sidebar-logo">
+                    Top Up
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/profile-logo.svg" alt="sidebar-logo">
+                    Profile
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/logout-logo.svg" alt="sidebar-logo">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <!-- Modal sidebar -->
+    </body>
+    <script src="./landing-page.js"></script>
 </html>
