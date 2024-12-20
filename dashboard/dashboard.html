@@ -11,7 +11,7 @@
         <title>Dashboard V1</title>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <nav>
                 <ul>
                     <li class="z-wallet-logo">
@@ -19,7 +19,6 @@
                     </li>
                     <li class="hamburger-menu" hidden>
                         <span class="material-symbols-outlined"> menu </span>
-                        <!-- <select name="nav-menu" id="nav-menu"></select> -->
                     </li>
 
                     <li class="nav-left">
@@ -46,6 +45,23 @@
                         </div>
                     </li>
                 </ul>
+            </nav>
+        </header> -->
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="logo">
+                    <a href="#">
+                        <img class="e-wallet-logo-medium" src="../assets/landing-page/wallet-logo.png" width="32" height="32" alt="Navigation" />
+                        <p>E-Wallet</p>
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <p class="navbar-right-name">Ghaluh Wizard</p>
+                    <img class="navbar-right-avatar" src="../assets/dashboard/avatar-dashboard.png" alt="" />
+                    <div class="hamburger-menu" onclick="toggleMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948ff"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </div>
+                </div>
             </nav>
         </header>
         <main class="container">
@@ -86,70 +102,38 @@
                             <h3>Balance</h3>
                         </div>
                         <p class="card-amount-cash-flow">Rp.120.000</p>
-                        <div class="card-trend-cash-flow">
-                            <p>2%</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00A700">
-                                <path d="M127.33-240 80-287.33l293.33-293.34L538-416l230-229.33H648.67V-712H880v231.33h-66v-116.66L537.33-320.67 372.67-485.33 127.33-240Z" />
-                            </svg>
-                            <p>3 Days Ago</p>
+                        <div class="card-income-expense">
+                            <span>
+                                <small>Income</small>
+                                <span>
+                                    <small>200.000</small>
+                                    <small>2%</small>
+                                    <small><img src="../assets/dashboard/ArrowRise.svg" alt="trend-up"></small>
+                                </span>
+                            </span>
+                            <span>
+                                <small>Expense</small>
+                                <span>
+                                    <small>100.000</small>
+                                    <small>5%</small>
+                                    <small><img src="../assets/dashboard/Arrowdown.svg" alt="trend-down"></small>
+                                </span>
+                            </span>
                         </div>
                     </div>
-                    <div class="card-cash-flow">
-                        <div class="card-title-cash-flow">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
-                                <path
-                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h200v80H160v480h640v-480H600v-80h200q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-184L280-544l56-56 104 104v-304h80v304l104-104 56 56-200 200Z"
-                                />
-                            </svg>
-                            <h3>Income</h3>
-                        </div>
-                        <p class="card-amount-cash-flow">Rp.2.120.000</p>
-                        <div class="card-trend-cash-flow">
-                            <p>11.01%%</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00A700">
-                                <path d="M127.33-240 80-287.33l293.33-293.34L538-416l230-229.33H648.67V-712H880v231.33h-66v-116.66L537.33-320.67 372.67-485.33 127.33-240Z" />
-                            </svg>
-                            <p>3 Days Ago</p>
+                    <div class="fast-service">
+                        <h3>Fast Service</h3>
+                        <div class="button-fast-service">
+                            <a href="../top-up/top-up.html">
+                                <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
+                                Top Up
+                            </a>
+                            <a href="../transfer/transfer.html">
+                                <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
+                                Transfer
+                            </a>
                         </div>
                     </div>
-                    <div class="card-cash-flow">
-                        <div class="card-title-cash-flow">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2948FF">
-                                <path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                            </svg>
-                            <h3>Expense</h3>
-                        </div>
-                        <p class="card-amount-cash-flow">Rp.120.000</p>
-                        <div class="card-trend-cash-flow">
-                            <p style="color: #d00000">5.06%</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D00000">
-                                <path d="M640-240v-80h104L536-526 376-366 80-664l56-56 240 240 160-160 264 264v-104h80v240H640Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="fast-service">
-                    <h3>Fast Service</h3>
-                    <div class="button-fast-service">
-                        <button type="button">
-                            <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
-                            Top Up
-                        </button>
-                        <button type="button">
-                            <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
-                            Transfer
-                        </button>
-                    </div>
-                </div>
-                <div class="tablet-mode">
-                    <button type="button">
-                        <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
-                        Top Up
-                    </button>
-                    <button type="button">
-                        <img src="../assets/dashboard/transfer-white.png" width="24" height="24" alt="" />
-                        Transfer
-                    </button>
                 </div>
                 <div class="income-chart">
                     <div class="income-chart-menu">
@@ -174,7 +158,7 @@
                         </div>
                     </div>
                     <div class="chart-picture">
-                        <img src="../assets/dashboard/Chart.png" width="472" alt="chart" />
+                        <img src="../assets/dashboard/chart-v2.png" width="472" alt="chart" />
                     </div>
                 </div>
             </article>
@@ -183,7 +167,7 @@
                     <h2>Transaction History</h2>
                     <a href="#">See All</a>
                 </section>
-                <ul>
+                <ul class="list-history-card">
                     <li class="card-transaction-history">
                         <img src="../assets/dashboard/person-transaction.png" alt="person-history-transaction" />
                         <div class="card-info-transaction-history">
@@ -243,5 +227,36 @@
                 </ul>
             </aside>
         </main>
+        <!-- Modal sidebar -->
+        <div class="sidebar">
+            <div class="nav-buttons">
+                <a href="../dashboard/dashboard.html" class="btn btn-signup">
+                    <img src="../assets/sidebar/dashboard-logo.svg" alt="sidebar-logo" />
+                    Dashboard
+                </a>
+                <a href="../transfer/transfer-find-people.html" class="btn btn-signup">
+                    <img src="../assets/sidebar/transfer-logo.svg" alt="sidebar-logo" />
+                    Transfer
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/history.svg" alt="sidebar-logo" />
+                    History
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/topup-logo.svg" alt="sidebar-logo" />
+                    Top Up
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/profile-logo.svg" alt="sidebar-logo" />
+                    Profile
+                </a>
+                <a href="#" class="btn btn-signup">
+                    <img src="../assets/sidebar/logout-logo.svg" alt="sidebar-logo" />
+                    Logout
+                </a>
+            </div>
+        </div>
+        <!-- Modal sidebar -->
     </body>
+    <script src="./dashboard.js"></script>
 </html>

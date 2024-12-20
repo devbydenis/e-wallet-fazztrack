@@ -1,3 +1,10 @@
+:root {
+    --blue: #2948ff;
+    --white: #ffffff;
+    --black: #0b132a;
+    ---grey: #4f5665;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +12,7 @@
     font-family: "Montserrat", sans-serif !important;
 }
 
+/* 
 header nav {
     width: 100%;
 }
@@ -93,7 +101,113 @@ header nav ul li:nth-child(1) {
     align-content: center;
     margin-right: 10px;
     color: #ffffff;
+} 
+*/
+
+/* ---------------------- Navbar ---------------------- */
+.navbar {
+    position: relative;
+    background-color: var(--white);
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+.logo img {
+    width: 32px;
+    height: 32px;
+    /* object-fit: contain; */
+}
+.logo p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 27.28px;
+    color: var(--blue);
+}
+
+.hamburger-menu {
+    color: #ffffff;
+    cursor: pointer;
+}
+.hamburger-menu > img:active {
+    transform: scale(0.9);
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.804);
+}
+.nav-buttons {
+    position: relative;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 25px 0px #00000026;
+    border-radius: 20px 0 0 20px;
+}
+
+.nav-buttons > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    color: var(---grey);
+}
+
+.active {
+    display: block;
+}
+
+.nav-buttons > a {
+    width: 100%;
+    border-radius: 5px;
+    /* color: var(--blue); */
+}
+.nav-buttons > a:hover {
+    /* outline: 2px solid #2948ff; */
+    color: var(--white);
+    background-color: var(--blue);
+}
+.nav-buttons > a > img:hover {
+    fill: var(--white);
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --------------------------------------------------------- */
 
 .container {
     /* display: flex;
@@ -112,7 +226,6 @@ header nav ul li:nth-child(1) {
 
 .menu {
     grid-area: menu;
-    /* border: 1px solid red; */
     border-right: 1px solid #e8e8e8;
     flex: 20%;
     display: flex;
@@ -122,7 +235,6 @@ header nav ul li:nth-child(1) {
     padding-top: 24px;
 }
 .menu a {
-    /* border: 1px solid red; */
     text-decoration: none;
     color: #4f5665;
     font-weight: 400;
@@ -153,7 +265,6 @@ header nav ul li:nth-child(1) {
 
 .cash-flow {
     display: flex;
-    justify-content: space-between;
     gap: 17px;
 }
 .card-cash-flow {
@@ -188,6 +299,25 @@ header nav ul li:nth-child(1) {
     letter-spacing: -0.6%;
     color: #4f5665;
 }
+
+.card-income-expense {
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid red; */
+}
+.card-income-expense span span {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+.card-income-expense span:first-child span {
+    color: #00a700;
+}
+.card-income-expense span:nth-child(2) span {
+    color: #d00000;
+}
+
 .card-trend-cash-flow {
     display: flex;
     align-items: center;
@@ -205,11 +335,7 @@ header nav ul li:nth-child(1) {
 }
 
 .fast-service {
-    border: 1px solid #e8e8e8;
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 16px;
-    margin: 23px 0px;
+    width: 100%;
 }
 .fast-service h3 {
     font-weight: 600;
@@ -217,26 +343,31 @@ header nav ul li:nth-child(1) {
     line-height: 24px;
     letter-spacing: -0, 6%;
     color: #0b132a;
+    margin-bottom: 15px;
 }
 .button-fast-service {
     display: flex;
-    gap: 14px;
+    flex-direction: column;
+    gap: 10px;
 }
-.button-fast-service button {
+.button-fast-service a {
+    text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     background-color: #2948ff;
     color: #ffffff;
     border-radius: 6px;
     border-style: none;
     padding: 10px;
-    width: 116px;
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
 }
-.button-fast-service button:hover {
+.button-fast-service a:hover {
     cursor: pointer;
     opacity: 0.9;
 }
@@ -336,6 +467,13 @@ header nav ul li:nth-child(1) {
 }
 
 @media screen and (min-width: 1024px) {
+    .nav-buttons {
+        left: 75%;
+        right: 25%;
+    }
+    .active {
+        transition: 0.5 ease;
+    }
     .tablet-mode {
         display: none;
     }
@@ -352,11 +490,8 @@ header nav ul li:nth-child(1) {
     .menu {
         display: none;
     }
-    .transaction-history {
-        border: 1px solid red;
-    }
+
     .transaction-history > ul {
-        border: 1px solid red;
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -398,16 +533,41 @@ header nav ul li:nth-child(1) {
         border: 1px solid #2948ff;
     }
 
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main"
+            "history"
+        ;
+    }
+    .main {
+        grid-area: main;
+    }
+    .history {
+        grid-area: history;
+    }
+
+    .cash-flow {
+        display: flex;
+    }
+    .card-cash-flow {
+        width: 50%;
+    }
+
     .chart {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
+    .chart-picture > img {
+        width: 100%;
+    }
+
     .fast-service {
-        display: none;
+        /* display: none; */
     }
     .tablet-mode {
-        border: 1px solid red;
         width: 100%;
         display: flex;
         gap: 23px;
@@ -415,8 +575,6 @@ header nav ul li:nth-child(1) {
         flex-direction: row;
     }
     .tablet-mode > button {
-        border: 1px solid red;
-
         display: flex;
         align-items: center;
         justify-content: center;

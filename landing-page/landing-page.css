@@ -160,8 +160,6 @@ button:hover {
     align-items: center;
     justify-content: center;
 }
-.banner-content .banner-download-button button:nth-child(1) {
-}
 .banner-content .banner-download-button button:nth-child(2) {
     color: var(--white);
     background-color: transparent;
