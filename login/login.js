@@ -1,4 +1,3 @@
-// const inputControl = document.getElementById("form-login-input");
 const form = document.querySelector("#form-login");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
@@ -20,17 +19,13 @@ const setError = (element, message) => {
     errorDisplay.textContent = message;
     errorDisplay.style.color = "red";
     element.parentElement.style.borderColor = "red";
-    // inputControl.classList.add("error");
-    // inputControl.classList.remove("success");
 };
 const setSuccess = (element) => {
     const inputControl = element.parentElement.parentElement;
-    const errorDisplay = inputControl.querySelector("small");
+    const successDisplay = inputControl.querySelector("small");
 
-    errorDisplay.textContent = "";
+    successDisplay.textContent = "";
     element.parentElement.style.borderColor = "green";
-    // inputControl.classList.add("success");
-    // inputControl.classList.remove("error");
 };
 
 const validateEmailField = () => {
@@ -60,27 +55,27 @@ const validatePasswordField = () => {
         return false;
     } else {
         setSuccess(password);
+        return true;
     }
 };
 password.addEventListener("input", validatePasswordField);
+
 function showPassword() {
     if (checkboxPassword.checked) {
         password.type = "text";
-        confirmPasswordInput.type = "text";
     } else {
         password.type = "password";
-        confirmPasswordInput.type = "password";
     }
 }
 function showModal() {
     const modal = document.getElementById("myModal");
-    const cancel = document.querySelector(".cancel")
+    const cancel = document.querySelector(".cancel");
 
     modal.style.display = "block";
 
-    cancel.onclick = function() {
-        modal.style.display = "none"
-    }
+    cancel.onclick = function () {
+        modal.style.display = "none";
+    };
 
     window.onclick = function (event) {
         if (event.target == modal) {
@@ -96,16 +91,17 @@ form.addEventListener("submit", (event) => {
     const { email, password } = dataRegister;
     const registedEmail = email;
     const registedPassword = password;
-    const isEmailValid = validateEmailField();
-    const isPasswordValid = validatePasswordField();
+    const loginEmail = event.target.email.value;
+    const loginPassword = event.target.password.value;
 
-    if (isEmailValid === registedEmail && isPasswordValid === registedPassword) {
-        localStorage.setItem("statusUser", true);
+    try {
+        if (loginEmail !== registedEmail || loginPassword !== registedPassword) {
+            throw new Error("Login failed! Make sure data is correct and registered!");
+        }
+        console.log(loginEmail, loginPassword);
+        localStorage.setItem("isUserLogin", true);
         location.href = "../enter-pin/enter-pin.html";
-        return;
-    } else {
-        console.log("Login Gagal");
-        showModal();
-        throw new Error("Login failed! Make sure data is correct!");
+    } catch (error) {
+            showModal();
     }
 });

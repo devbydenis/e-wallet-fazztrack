@@ -7,8 +7,6 @@
 /* ------------------------------------------------------------------------ */
 /* -------NAVBAR----------------------------------------------------------------- */
 
-body {
-}
 
 .navbar {
     background-color: #2948ff;
@@ -25,7 +23,7 @@ body {
 }
 
 .nav-buttons {
-    /*  */
+    
     position: absolute;
     top: 55px;
     left: 0;
@@ -509,4 +507,4 @@ footer p {
     .e-wallet-logo-small {
         display: none;
     }
-}
+} */
